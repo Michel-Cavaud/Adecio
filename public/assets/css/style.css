@@ -8,8 +8,33 @@ and open the template in the editor.
     Author     : michel
 */
 
-header{
-    background-color: #C6EFF7;
-    
-    
+
+
+body{
+  font-family: 'Courgette', cursive;  
 }
+
+
+.nav-link::before{
+    content : ' ';
+    border-left: 2px solid #000;
+    display: inline-block;
+    height: 12px;
+    margin-right: 20px;
+   
+}
+
+.rotateAdecio{
+   position: relative;
+top: -30px; 
+     -ms-transform: rotate(-6deg); /* IE 9 */
+    transform: rotate(-6deg);
+}
+
+.roundedAdecio{
+    border-radius: 10px;
+}
+.shadowAdecio{
+    box-shadow: 7px 7px 7px rgba(0, 0, 0, .2);
+}
+ 

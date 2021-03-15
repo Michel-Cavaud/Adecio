@@ -52,3 +52,29 @@
 
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css");
 
+html {
+  font-size: 1rem;
+}
+
+@include media-breakpoint-up(sm) {
+  html {
+    font-size: 0.8rem;
+  }
+}
+
+@include media-breakpoint-up(md) {
+  html {
+    font-size: 1rem;
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  html {
+    font-size: 1.1rem;
+  }
+}
+@include media-breakpoint-up(xl) {
+  html {
+    font-size: 1.2rem;
+  }
+}
