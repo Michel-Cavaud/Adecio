@@ -6393,6 +6393,10 @@ textarea.form-control-lg {
   min-width: 100vw !important;
 }
 
+.h-12 {
+  height: 14% !important;
+}
+
 .h-25 {
   height: 25% !important;
 }
@@ -10625,30 +10629,6 @@ textarea.form-control-lg {
 
   .d-print-none {
     display: none !important;
-  }
-}
-html {
-  font-size: 1rem;
-}
-
-@media (min-width: 576px) {
-  html {
-    font-size: 0.8rem;
-  }
-}
-@media (min-width: 768px) {
-  html {
-    font-size: 1rem;
-  }
-}
-@media (min-width: 992px) {
-  html {
-    font-size: 1.1rem;
-  }
-}
-@media (min-width: 1200px) {
-  html {
-    font-size: 1.2rem;
   }
 }
 

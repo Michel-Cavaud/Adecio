@@ -11,7 +11,7 @@ and open the template in the editor.
 
 
 body{
-  font-family: 'Courgette', cursive;  
+    /*font-family: 'Courgette', cursive;  */
 }
 
 
@@ -21,20 +21,104 @@ body{
     display: inline-block;
     height: 12px;
     margin-right: 20px;
-   
+
 }
 
 .rotateAdecio{
-   position: relative;
-top: -30px; 
-     -ms-transform: rotate(-6deg); /* IE 9 */
+    position: relative;
+    top: 10px; 
+    -ms-transform: rotate(-6deg); /* IE 9 */
     transform: rotate(-6deg);
 }
 
 .roundedAdecio{
     border-radius: 10px;
 }
+.roundedBasAdecio{
+    border-radius: 0 0 10px 10px;
+}
+
+.roundedHautAdecio{
+    border-radius: 10px 10px 0 0;
+}
 .shadowAdecio{
     box-shadow: 7px 7px 7px rgba(0, 0, 0, .2);
 }
- 
+
+.row-flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.triangle{
+    margin: 0;
+    padding: 0;
+    content: '';
+    height : 0;
+    width : 0;
+    border-top : 20px solid white;
+    border-right : 20px solid transparent;
+    border-left : 20px solid transparent;
+}
+
+.trianglep{
+    margin: 0;
+    padding: 0;
+    content: '';
+    height : 0;
+    width : 0;
+    border-top : 15px solid white;
+    border-right : 15px solid transparent;
+    border-left : 15px solid transparent;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 0.5fr 1fr 1fr 1fr 0.5fr;
+    grid-template-rows: 0.5fr 2fr 1fr;
+    gap: 0px 80px;
+    grid-template-areas:
+        ". A1 B1 C1 ."
+        ". A2 B2 C2 ."
+        ". A3 B3 C3 .";
+}
+.A1 { grid-area: A1;}
+.A2 { grid-area: A2;}
+.A3 { grid-area: A3;}
+.B1 { grid-area: B1;}
+.B2 { grid-area: B2;}
+.B3 { grid-area: B3;}
+.C1 { grid-area: C1;}
+.C2 { grid-area: C2;}
+.C3 { grid-area: C3;}
+
+@media (max-width: 640px) {
+    .grid-container {
+        text-align: center;
+        grid-template-areas:
+            "A1"
+            "A2"
+            "A3"
+            "B1"
+            "B2"
+            "B3"
+            "C1"
+            "C2"
+            "C3";
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.5fr 2fr 1fr 0.5fr 2fr 1fr 0.5fr 2fr 1fr;
+
+    }
+    .A1 { grid-area: A1; }
+    .A2 { grid-area: A2;  }
+    .A3 { grid-area: A3; margin-bottom: 15px;}
+    .B1 { grid-area: B1;}
+    .B2 { grid-area: B2;}
+    .B3 { grid-area: B3; margin-bottom: 15px;}
+    .C1 { grid-area: C1;}
+    .C2 { grid-area: C2;}
+    .C3 { grid-area: C3;}
+}
