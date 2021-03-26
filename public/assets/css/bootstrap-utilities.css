@@ -4,6 +4,26 @@
  * Copyright 2011-2021 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
+.dosis {
+  font-family: "Dosis", sans-serif;
+  font-weight: 400;
+}
+
+.dosisSB {
+  font-family: "Dosis", sans-serif;
+  font-weight: 600;
+}
+
+.karma {
+  font-family: "Karma", serif;
+  font-weight: 300;
+}
+
+.krub {
+  font-family: "Krub", sans-serif;
+  font-weight: 400;
+}
+
 .clearfix::after {
   display: block;
   clear: both;
@@ -64,6 +84,83 @@
 }
 .link-dark:hover, .link-dark:focus {
   color: #1a1e21;
+}
+
+.link-black {
+  color: #000;
+}
+.link-black:hover, .link-black:focus {
+  color: black;
+}
+
+.link-txmenu {
+  color: #030303;
+}
+.link-txmenu:hover, .link-txmenu:focus {
+  color: #020202;
+}
+
+.link-traitmenu {
+  color: #338f99;
+}
+.link-traitmenu:hover, .link-traitmenu:focus {
+  color: #5ca5ad;
+}
+
+.link-txtitre {
+  color: #00737f;
+}
+.link-txtitre:hover, .link-txtitre:focus {
+  color: #005c66;
+}
+
+.link-txcorps {
+  color: #464646;
+}
+.link-txcorps:hover, .link-txcorps:focus {
+  color: #383838;
+}
+
+.link-txbas {
+  color: #cce2e5;
+}
+.link-txbas:hover, .link-txbas:focus {
+  color: #d6e8ea;
+}
+
+.link-bgcentre {
+  color: #eaeaea;
+}
+.link-bgcentre:hover, .link-bgcentre:focus {
+  color: #eeeeee;
+}
+
+.link-bgbas {
+  color: #00737f;
+}
+.link-bgbas:hover, .link-bgbas:focus {
+  color: #005c66;
+}
+
+.link-txdroite {
+  color: #f7dfe4;
+}
+.link-txdroite:hover, .link-txdroite:focus {
+  color: #f9e5e9;
+}
+
+.link-bgasdroite {
+  color: #e83c69;
+}
+.link-bgasdroite:hover, .link-bgasdroite:focus {
+  color: #ed6387;
+}
+
+.link-txcopy {
+  color: #ecebec;
+}
+.link-txcopy:hover, .link-txcopy:focus {
+  color: #f0eff0;
 }
 
 .ratio {
@@ -445,6 +542,50 @@
   border-color: #212529 !important;
 }
 
+.border-black {
+  border-color: #000 !important;
+}
+
+.border-txmenu {
+  border-color: #030303 !important;
+}
+
+.border-traitmenu {
+  border-color: #338f99 !important;
+}
+
+.border-txtitre {
+  border-color: #00737f !important;
+}
+
+.border-txcorps {
+  border-color: #464646 !important;
+}
+
+.border-txbas {
+  border-color: #cce2e5 !important;
+}
+
+.border-bgcentre {
+  border-color: #eaeaea !important;
+}
+
+.border-bgbas {
+  border-color: #00737f !important;
+}
+
+.border-txdroite {
+  border-color: #f7dfe4 !important;
+}
+
+.border-bgasdroite {
+  border-color: #e83c69 !important;
+}
+
+.border-txcopy {
+  border-color: #ecebec !important;
+}
+
 .border-white {
   border-color: #fff !important;
 }
@@ -503,6 +644,10 @@
 
 .min-vw-100 {
   min-width: 100vw !important;
+}
+
+.h-12 {
+  height: 14% !important;
 }
 
 .h-25 {
@@ -1231,6 +1376,50 @@
   color: #212529 !important;
 }
 
+.text-black {
+  color: #000 !important;
+}
+
+.text-txmenu {
+  color: #030303 !important;
+}
+
+.text-traitmenu {
+  color: #338f99 !important;
+}
+
+.text-txtitre {
+  color: #00737f !important;
+}
+
+.text-txcorps {
+  color: #464646 !important;
+}
+
+.text-txbas {
+  color: #cce2e5 !important;
+}
+
+.text-bgcentre {
+  color: #eaeaea !important;
+}
+
+.text-bgbas {
+  color: #00737f !important;
+}
+
+.text-txdroite {
+  color: #f7dfe4 !important;
+}
+
+.text-bgasdroite {
+  color: #e83c69 !important;
+}
+
+.text-txcopy {
+  color: #ecebec !important;
+}
+
 .text-white {
   color: #fff !important;
 }
@@ -1301,6 +1490,50 @@
 
 .bg-dark {
   background-color: #212529 !important;
+}
+
+.bg-black {
+  background-color: #000 !important;
+}
+
+.bg-txmenu {
+  background-color: #030303 !important;
+}
+
+.bg-traitmenu {
+  background-color: #338f99 !important;
+}
+
+.bg-txtitre {
+  background-color: #00737f !important;
+}
+
+.bg-txcorps {
+  background-color: #464646 !important;
+}
+
+.bg-txbas {
+  background-color: #cce2e5 !important;
+}
+
+.bg-bgcentre {
+  background-color: #eaeaea !important;
+}
+
+.bg-bgbas {
+  background-color: #00737f !important;
+}
+
+.bg-txdroite {
+  background-color: #f7dfe4 !important;
+}
+
+.bg-bgasdroite {
+  background-color: #e83c69 !important;
+}
+
+.bg-txcopy {
+  background-color: #ecebec !important;
 }
 
 .bg-body {

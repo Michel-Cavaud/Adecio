@@ -4,6 +4,26 @@
  * Copyright 2011-2021 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
+.dosis {
+  font-family: "Dosis", sans-serif;
+  font-weight: 400;
+}
+
+.dosisSB {
+  font-family: "Dosis", sans-serif;
+  font-weight: 600;
+}
+
+.karma {
+  font-family: "Karma", serif;
+  font-weight: 300;
+}
+
+.krub {
+  font-family: "Krub", sans-serif;
+  font-weight: 400;
+}
+
 .container,
 .container-fluid,
 .container-xxl,

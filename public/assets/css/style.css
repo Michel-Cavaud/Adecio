@@ -9,19 +9,207 @@ and open the template in the editor.
 */
 
 
+.icone{
 
-body{
-    /*font-family: 'Courgette', cursive;  */
+    margin-left: 150px;
+}
+.fonddegrade{
+    background-color: transparent;
+    /* background: url(../images/fonddegrade.png)  top center no-repeat; 
+     background-size: cover;*/
+    background-image: -webkit-linear-gradient(to top left, #eaeaea, #ffffff );
+    background-image: -moz-linear-gradient(to top left, #eaeaea, #ffffff );
+    background-image: -o-linear-gradient(to top left, #eaeaea, #ffffff );
+    background-image: linear-gradient(0deg, #eaeaea, #ffffff );
+}
+
+.fonddegradeinv{
+
+
+    width: 100%;
+    display: inline-block;
+    vertical-align: middle;
+
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-image: url(../images/fondeventail2500.png);
+}
+#imagebas-inner {
+    display: block;
+    height: 100%;
+
+}
+
+.flament{
+    margin-top: 60px;
+}
+#image {
+    width: 100%;
+    display: inline-block;
+    vertical-align: middle;
+    font: 0/0 serif;
+    text-shadow: none;
+    color: transparent;
+    background-size: 100%;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+
+
+}
+#image{
+    background-image: url(../images/flament1920.png);
+}
+@media only screen and (max-width: 320px) {
+    .icone{
+        margin-left: 0px;
+    }
+    #image {
+        background-image: url(../images/flament320.png); 
+    }
+    h3{
+        font-size: 1rem;
+    }
+    h4{
+        font-size: 0.9rem;
+    }
+    h5{
+        font-size: 0.8rem;
+    }
+    h6{
+        font-size: 0.6rem;
+    }
+    .small {
+        font-size: 0.6em;
+    }
+}
+@media only screen and (min-width: 321px) and (max-width: 500px) {
+    .icone{
+        margin-left: 0px;
+    }
+    #image {
+        background-image: url(../images/flament500.png); 
+    }
+}
+@media only screen and (min-width: 501px) and (max-width: 700px) {
+
+    .icone{
+        margin-left: 100px;
+    }
+    #image {
+        background-image: url(../images/flament700.png); 
+    }
+
+
+}
+@media only screen and (min-width: 701px) and  (max-width: 950px) {
+    .icone{
+        margin-left: 100px;
+    }
+    #image {
+        background-image: url(../images/flament950.png); 
+    }
+    .A2, .B2, .C2 { padding:0.5rem !important;}
+    .C1, .B1, .A1 { margin: 0 0 0 0 !important}
+    h3{
+        font-size: 1.05rem;
+    }
+    h4{
+        font-size: 1rem;
+    }
+    h5{
+        font-size: 1rem;
+    }
+    h6{
+        font-size: 0.75rem;
+    }
+
+}
+@media only screen and (min-width: 951px) and  (max-width: 1300px) {
+    .icone{
+        margin-left: 100px;
+    }
+    h3{
+        font-size: 1.5rem;
+    }
+    h4{
+        font-size: 1.25rem;
+    }
+    h5{
+        font-size: 1rem;
+    }
+    h6{
+        font-size: 0.75rem;
+    }
+    .C1, .B1, .A1 { margin: 0 1rem 0 1rem !important}
+    .grid-container {
+        grid-template-columns: 9% 24% 5% 24% 5% 24% 9% !important;
+    }
+}
+
+#image-inner {
+    display: block;
+    height: 0;
+    padding-top: 34%;
 }
 
 
+.colorhr{
+    border: 1px solid #63c0d2;
+    opacity: 1;
+
+}
+
 .nav-link::before{
     content : ' ';
-    border-left: 2px solid #000;
+    border-left: 2px solid #338f99;
     display: inline-block;
     height: 12px;
     margin-right: 20px;
 
+}
+.nav-item:hover{
+    background-color: #eaeaea;
+    border: 1px solid transparent;
+    border-radius: 10px  10px 0 0;
+}
+.nav-item:hover .ulsousmenu{
+    display: block;
+}
+
+
+ul{
+    list-style: none;
+    padding: 0; margin: 0
+}
+li{
+    padding: 0; margin: 0;
+}
+li a{
+    text-decoration: none;
+}
+.ulsousmenu{
+    background-color: #eaeaea;
+    border: 1px solid transparent;
+    border-radius: 0 0 10px  10px;
+    text-align: center;
+
+
+    display: none;
+    position: absolute;
+}
+.sousmenu:hover{
+    background-color: white;
+    border: 1px solid transparent;
+    border-radius:10px;
+
+}
+
+.sousmenu{
+    padding: 0.5rem 1.3rem 0.5rem 1.3rem;
+}
+.ulsousmenu a{
+    display:block; 
 }
 
 .rotateAdecio{
@@ -59,66 +247,199 @@ body{
     content: '';
     height : 0;
     width : 0;
-    border-top : 20px solid white;
+    border-top : 20px solid #eaeaea;
     border-right : 20px solid transparent;
     border-left : 20px solid transparent;
 }
-
-.trianglep{
+.triangleInv{
     margin: 0;
     padding: 0;
     content: '';
     height : 0;
     width : 0;
+    border-bottom : 20px solid white;
+    border-right : 20px solid transparent;
+    border-left : 20px solid transparent;
+}
+
+.trianglep, .trianglepblanc{
+    margin: 0;
+    padding: 0;
+    content: '';
+    height : 0;
+    width : 0;
+    border-top : 15px solid #eaeaea;
+    border-right : 15px solid transparent;
+    border-left : 15px solid transparent;
+}
+.trianglepblanc{
     border-top : 15px solid white;
+
+}
+
+.trianglepInv{
+    margin: 0;
+    padding: 0;
+    content: '';
+    height : 0;
+    width : 0;
+    border-bottom : 15px solid white;
     border-right : 15px solid transparent;
     border-left : 15px solid transparent;
 }
 
 .grid-container {
     display: grid;
-    grid-template-columns: 0.5fr 1fr 1fr 1fr 0.5fr;
+    /*grid-template-columns: 0.5fr 1fr 1fr 1fr 0.5fr;*/
+    grid-template-columns: 16% 16% 10% 16% 10% 16% 16%;
+
     grid-template-rows: 0.5fr 2fr 1fr;
-    gap: 0px 80px;
+
     grid-template-areas:
-        ". A1 B1 C1 ."
-        ". A2 B2 C2 ."
-        ". A3 B3 C3 .";
+        ". A1 . B1 . C1 ."
+        ". A2 . B2 . C2 ."
+        ". A3 . B3 . C3 .";
 }
-.A1 { grid-area: A1;}
-.A2 { grid-area: A2;}
+.A1 { grid-area: A1;margin: 0 1.5rem 0 1.5rem}
+.A2 { grid-area: A2; padding:  3rem;}
 .A3 { grid-area: A3;}
-.B1 { grid-area: B1;}
-.B2 { grid-area: B2;}
+.B1 { grid-area: B1;margin: 0 1.5rem 0 1.5rem}
+.B2 { grid-area: B2;padding:  3rem;}
 .B3 { grid-area: B3;}
-.C1 { grid-area: C1;}
-.C2 { grid-area: C2;}
+.C1 { grid-area: C1; margin: 0 1rem 0 1rem}
+.C2 { grid-area: C2;padding:3rem;}
 .C3 { grid-area: C3;}
 
-@media (max-width: 640px) {
+
+.grid-container2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 15px 0.6fr 15px 1fr;
+
+    grid-template-areas:
+        "M1 M1 M1 M1 M2"
+        "N1 N1 N1 N1 N2"
+        "O O O O O"
+        "P1 P2 P2 P2 P2"
+        "Q1 Q2 Q2 Q2 Q2";
+}
+.M1 { grid-area: M1; }
+.M2 { grid-area: M2; }
+.N1 { grid-area: N1; }
+.N2 { grid-area: N2; }
+.O { grid-area: O; }
+.P1 { grid-area: P1; }
+.P2 { grid-area: P2; }
+.Q1 { grid-area: Q1; }
+.Q2 { grid-area: Q2; }
+
+.grid-containerfooter {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 0.01fr 1.2fr 0.01fr 1.2fr 0.01fr 1.8fr 0.01fr 1.2fr 0.8fr 0.8fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+        "debut debut debut mentions vide site barre1 design barre2 photo barre3 tout fin fin";
+    font-size: 0.7em;
+    padding: 2px 0 2px 0;
+}
+.fin { grid-area: fin; }
+.tout { grid-area: tout; }
+.barre3 { 
+    grid-area: barre3;
+    border-left: 1px solid white;
+    content: '';
+}
+.photo { grid-area: photo; }
+.barre2 { 
+    grid-area: barre2;
+    border-left: 1px solid white;
+    content: '';
+}
+.design { grid-area: design; }
+.barre1 { 
+    grid-area: barre1; 
+    border-left: 1px solid white;
+    content: '';
+}
+.site { grid-area: site; }
+.vide { grid-area: vide; }
+.mentions { grid-area: mentions; }
+.debut { grid-area: debut; }
+
+
+
+
+@media (max-width: 700px) {
     .grid-container {
         text-align: center;
         grid-template-areas:
-            "A1"
-            "A2"
-            "A3"
-            "B1"
-            "B2"
-            "B3"
-            "C1"
-            "C2"
-            "C3";
-        grid-template-columns: 1fr;
+            ".A1."
+            ".A2."
+            ".A3."
+            ".B1."
+            ".B2."
+            ".B3."
+            ".C1."
+            ".C2."
+            ".C3.";
+        grid-template-columns: 4% 1fr 4%;
         grid-template-rows: 0.5fr 2fr 1fr 0.5fr 2fr 1fr 0.5fr 2fr 1fr;
 
     }
     .A1 { grid-area: A1; }
-    .A2 { grid-area: A2;  }
+    .A2 { grid-area: A2;  padding: 1rem;}
     .A3 { grid-area: A3; margin-bottom: 15px;}
     .B1 { grid-area: B1;}
-    .B2 { grid-area: B2;}
+    .B2 { grid-area: B2;padding: 1rem;}
     .B3 { grid-area: B3; margin-bottom: 15px;}
     .C1 { grid-area: C1;}
-    .C2 { grid-area: C2;}
+    .C2 { grid-area: C2; padding: 1rem;}
     .C3 { grid-area: C3;}
+
+
+    .grid-container2 {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 15px 0.6fr 15px 1fr;
+        gap: 0px 0px;
+        grid-template-areas:
+            "M1 M1 M1 M1"
+            "N1 N1 N1 N1"
+            "O O O O"
+            "P2 P2 P2 P2"
+            "Q2 Q2 Q2 Q2";
+    }
+    .M1 { grid-area: M1; }
+
+    .N1 { grid-area: N1; }
+
+    .O { grid-area: O; }
+
+    .P2 { grid-area: P2; }
+
+    .Q2 { grid-area: Q2; }
+
+
+    .grid-containerfooter {
+        display: grid;
+        grid-template-columns:  1fr 0.01fr 1.2fr 0.01fr 1.2fr 0.01fr 1.8fr 0.01fr 1.2fr;
+        grid-template-rows: 1fr;
+        gap: 0px 0px;
+        grid-template-areas:
+            " mentions vide site barre1 design barre2 photo barre3 tout ";
+        font-size: 0.7em;
+    }
+
+    .rotateAdecio{
+        position: relative;
+        top: 15px; 
+        -ms-transform: rotate(-2deg); /* IE 9 */
+        transform: rotate(-2deg);
+    }
+
 }
+
+
+
+
