@@ -165,13 +165,13 @@ and open the template in the editor.
     border-left: 2px solid #338f99;
     display: inline-block;
     height: 12px;
-    margin-right: 20px;
+    margin-right: 12px;
 
 }
 .nav-item:hover{
-    background-color: #eaeaea;
+    background-color: #f8f8f8;
     border: 1px solid transparent;
-    border-radius: 10px  10px 0 0;
+    border-radius: 10px;
 }
 .nav-item:hover .ulsousmenu{
     display: block;
@@ -189,14 +189,16 @@ li a{
     text-decoration: none;
 }
 .ulsousmenu{
-    background-color: #eaeaea;
-    border: 1px solid transparent;
-    border-radius: 0 0 10px  10px;
+    background-color: #f8f8f8;
+   
+    border-top: 1px solid #00737f ;
+    border-radius: 10px;
     text-align: center;
-
-
+   
     display: none;
     position: absolute;
+    
+    box-shadow: 7px 7px 7px rgba(0, 0, 0, .2);
 }
 .sousmenu:hover{
     background-color: white;
@@ -204,9 +206,8 @@ li a{
     border-radius:10px;
 
 }
-
 .sousmenu{
-    padding: 0.5rem 1.3rem 0.5rem 1.3rem;
+    padding: 0.5rem 1rem 0.5rem 1rem;
 }
 .ulsousmenu a{
     display:block; 
