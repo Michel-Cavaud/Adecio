@@ -7,12 +7,65 @@ and open the template in the editor.
     Created on : 16 févr. 2021, 16:51:19
     Author     : michel
 */
+#scrollUp
+{
+    position: fixed;
+    bottom : 0px;
+    right: 0px;
+    opacity: 1;
+    background-color: #FDEDF1;
+    padding: 0.25rem 0.5rem 0.25rem 0.5rem;
+    border-radius: 50%;
+    visibility: hidden;
+    
+       
+}
+.bi-chevron-double-up{
+    color: black;
+}
 
-
+.espacement{
+    line-height : 1.6;
+}
 .icone{
 
     margin-left: 150px;
 }
+
+.lienpro, .lienpro:hover{
+    text-decoration: none;
+    color: #cce2e5;
+}
+
+
+.A3:hover .gauche, .M1:hover{
+    background-color: #338f98 !important;
+}
+
+
+.B3haut{
+    padding: 0;
+}
+.B3haut:hover .centrehaut{
+    background-color: #338f98 !important;
+}
+.B3bas{
+    padding: 0;
+}
+.B3bas:hover .centrebas{
+    background-color: #338f98 !important;
+}
+.lienperso, .lienperso:hover{
+    text-decoration: none;
+    color: #f7dfe4;
+}
+
+.C3:hover .droite, .Q2:hover{
+    background-color: #ED638C !important;
+}
+
+
+
 .fonddegrade{
     background-color: transparent;
     /* background: url(../images/fonddegrade.png)  top center no-repeat; 
@@ -21,15 +74,13 @@ and open the template in the editor.
     background-image: -moz-linear-gradient(to top left, #eaeaea, #ffffff );
     background-image: -o-linear-gradient(to top left, #eaeaea, #ffffff );
     background-image: linear-gradient(0deg, #eaeaea, #ffffff );
+    padding-bottom: 5rem;
 }
 
 .fonddegradeinv{
-
-
     width: 100%;
     display: inline-block;
     vertical-align: middle;
-
     background-size: cover;
     background-position: 50% 50%;
     background-repeat: no-repeat;
@@ -109,8 +160,8 @@ and open the template in the editor.
     #image {
         background-image: url(../images/flament950.png); 
     }
-    .A2, .B2, .C2 { padding:0.5rem !important;}
-    .C1, .B1, .A1 { margin: 0 0 0 0 !important}
+    .A2, .B2, .C2 { padding:2.5rem 0.5rem 0.5rem 0.5rem !important;}
+    .C1, .B1, .A1 { margin: auto 0 auto 0 !important ; padding: 0.5rem 0 0.5rem 0;}
     h3{
         font-size: 1.05rem;
     }
@@ -145,6 +196,9 @@ and open the template in the editor.
     .grid-container {
         grid-template-columns: 9% 24% 5% 24% 5% 24% 9% !important;
     }
+    .centrebas .centrehaut{
+        padding-bottom: 1.25rem;
+    }
 }
 
 #image-inner {
@@ -168,10 +222,14 @@ and open the template in the editor.
     margin-right: 12px;
 
 }
-.nav-item:hover{
-    background-color: #f8f8f8;
-    border: 1px solid transparent;
-    border-radius: 10px;
+.nav-link{
+    -webkit-transition: color 1s;
+    transition: color 1s;
+    color: #030303 !important;
+}
+.nav-link:hover, .nav-item:hover{
+    color : #00737f !important;
+
 }
 .nav-item:hover .ulsousmenu{
     display: block;
@@ -190,32 +248,31 @@ li a{
 }
 .ulsousmenu{
     background-color: #f8f8f8;
-   
-    border-top: 1px solid #00737f ;
-    border-radius: 10px;
+    border-radius: 0 0 10px 10px;
     text-align: center;
-   
     display: none;
     position: absolute;
-    
     box-shadow: 7px 7px 7px rgba(0, 0, 0, .2);
 }
 .sousmenu:hover{
-    background-color: white;
-    border: 1px solid transparent;
-    border-radius:10px;
+    color : #00737f !important;
 
 }
 .sousmenu{
     padding: 0.5rem 1rem 0.5rem 1rem;
+    color: #030303 !important;
 }
 .ulsousmenu a{
     display:block; 
 }
 
+.colorparticulier:hover{
+    color: #e83c69 !important;
+}
+
 .rotateAdecio{
     position: relative;
-    top: 10px; 
+    top: 35px; 
     -ms-transform: rotate(-6deg); /* IE 9 */
     transform: rotate(-6deg);
 }
@@ -302,13 +359,13 @@ li a{
         ". A3 . B3 . C3 .";
 }
 .A1 { grid-area: A1;margin: 0 1.5rem 0 1.5rem}
-.A2 { grid-area: A2; padding:  3rem;}
+.A2 { grid-area: A2; padding:  4rem 1rem 2rem 1rem;}
 .A3 { grid-area: A3;}
 .B1 { grid-area: B1;margin: 0 1.5rem 0 1.5rem}
-.B2 { grid-area: B2;padding:  3rem;}
+.B2 { grid-area: B2;padding:  4rem 1rem 2rem 1rem;}
 .B3 { grid-area: B3;}
 .C1 { grid-area: C1; margin: 0 1rem 0 1rem}
-.C2 { grid-area: C2;padding:3rem;}
+.C2 { grid-area: C2;padding:  4rem 1rem 2rem 1rem;}
 .C3 { grid-area: C3;}
 
 
@@ -441,6 +498,22 @@ li a{
 
 }
 
+.lienrapide{
+    text-decoration: none;
+    color: black;
+}
+
+.lienrapide:hover{
+    text-decoration: none;
+    color : #00737f !important;
+}
+
+.bi{
+    font-size: 1.5rem;
+}
+.bi:hover{
+    font-size: 1.8rem;
+}
 
 
 
