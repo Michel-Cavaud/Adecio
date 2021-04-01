@@ -7,8 +7,8 @@
     </div>
 </section>
 
-<section>
-    <div class="container my-5">
+<section id="accompagner">
+    <div class="container mb-5">
         <div class="row text-center justify-content-center">
             <div class ="col-md-12 col-lg-8 ">
                 <h3 class="text-txtitre dosisSB text-uppercase">Accompagner l’émergence de vos potentiels professionnels</h3>
@@ -128,38 +128,41 @@
 </section>
 
 <script>
+    $(document).ready(function() {
+        $('.M1').on("mouseover", function () {
+            $('.gauchepro').removeClass('bg-bgbas');
+            $('.gauchepro').css("background-color", '#338f98');
+            //$('.M1 h5').css("font-weight", '600');
+        });
+        $('.M1').on("mouseout", function () {
+            $('.gauchepro').addClass('bg-bgbas');
+            $('.gauchepro').css("background-color", '');
+            //$('.M1 h5').css("font-weight", '400');
+        });
+        $('.Q2').on("mouseover", function () {
+            $('.droiteperso').removeClass('bg-bgasdroite');
+            $('.droiteperso').css("background-color", '#ED638C');
+            //$('.Q2 h5').css("font-weight", '600');
+        });
+        $('.Q2').on("mouseout", function () {
+            $('.droiteperso').addClass('bg-bgasdroite');
+            $('.droiteperso').css("background-color", '');
+            //$('.Q2 h5').css("font-weight", '400');
+        });
 
-    $('.M1').on("mouseover", function () {
-        $('.gauchepro').removeClass('bg-bgbas');
-        $('.gauchepro').css("background-color", '#338f98');
+
+        $(window).scroll(function () { 
+            if ($(this).scrollTop() >= 200 ) {  
+               
+                $('#scrollUp').css("visibility", "visible");
+                $('#scrollUp').css('bottom','50px');
+                console.log('sup');
+            } else { 
+               
+                $('#scrollUp').css('visibility','');
+               
+                console.log('inf');
+            }
+        });
     });
-    $('.M1').on("mouseout", function () {
-        $('.gauchepro').addClass('bg-bgbas');
-        $('.gauchepro').css("background-color", '');
-    });
-    $('.Q2').on("mouseover", function () {
-        $('.droiteperso').removeClass('bg-bgasdroite');
-        $('.droiteperso').css("background-color", '#ED638C');
-    });
-    $('.Q2').on("mouseout", function () {
-        $('.droiteperso').addClass('bg-bgasdroite');
-        $('.droiteperso').css("background-color", '');
-    });
-    
-    
-    $(window).scroll(function () { 
-        if ($(this).scrollTop() > 200 ) {  
-            $('#scrollUp').css("visibility", "visible");
-            $('#scrollUp').css('right' , '100px');  
-            $('#scrollUp').animate({'bottom' : '100px'});          
-        } else { 
-            
-             $('#scrollUp').animate({'bottom' : ''});  
-            $('#scrollUp').css('right' , '');  
-            $('#scrollUp').css("visibility", "hidden");
-           
-          
-        }
-    });
-   
 </script>

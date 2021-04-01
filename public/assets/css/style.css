@@ -7,18 +7,21 @@ and open the template in the editor.
     Created on : 16 févr. 2021, 16:51:19
     Author     : michel
 */
+
+#accompagner{
+    margin-top: 5.5rem;
+    margin-bottom: 5.5rem;
+}
 #scrollUp
 {
     position: fixed;
     bottom : 0px;
-    right: 0px;
+    right: 50px;
     opacity: 1;
     background-color: #FDEDF1;
     padding: 0.25rem 0.5rem 0.25rem 0.5rem;
     border-radius: 50%;
     visibility: hidden;
-    
-       
 }
 .bi-chevron-double-up{
     color: black;
@@ -40,6 +43,11 @@ and open the template in the editor.
 
 .A3:hover .gauche, .M1:hover{
     background-color: #338f98 !important;
+    /*font-weight: 600 !important;*/
+}
+
+.A3:hover h5{
+    /*font-weight: 600 !important;*/
 }
 
 
@@ -49,11 +57,17 @@ and open the template in the editor.
 .B3haut:hover .centrehaut{
     background-color: #338f98 !important;
 }
+.B3haut:hover h5{
+    /*font-weight: 600 !important;*/
+}
 .B3bas{
     padding: 0;
 }
 .B3bas:hover .centrebas{
     background-color: #338f98 !important;
+}
+.B3bas:hover h5{
+    /*font-weight: 600 !important;*/
 }
 .lienperso, .lienperso:hover{
     text-decoration: none;
@@ -63,7 +77,9 @@ and open the template in the editor.
 .C3:hover .droite, .Q2:hover{
     background-color: #ED638C !important;
 }
-
+.C3:hover h5{
+    /*font-weight: 600 !important;*/
+}
 
 
 .fonddegrade{
@@ -74,7 +90,7 @@ and open the template in the editor.
     background-image: -moz-linear-gradient(to top left, #eaeaea, #ffffff );
     background-image: -o-linear-gradient(to top left, #eaeaea, #ffffff );
     background-image: linear-gradient(0deg, #eaeaea, #ffffff );
-    padding-bottom: 5rem;
+    padding-bottom: 7rem;
 }
 
 .fonddegradeinv{
@@ -93,7 +109,7 @@ and open the template in the editor.
 }
 
 .flament{
-    margin-top: 60px;
+    margin-top: 55px;
 }
 #image {
     width: 100%;
@@ -207,11 +223,9 @@ and open the template in the editor.
     padding-top: 34%;
 }
 
-
 .colorhr{
     border: 1px solid #63c0d2;
     opacity: 1;
-
 }
 
 .nav-link::before{
@@ -220,22 +234,21 @@ and open the template in the editor.
     display: inline-block;
     height: 12px;
     margin-right: 12px;
-
 }
 .nav-link{
-    -webkit-transition: color 1s;
-    transition: color 1s;
+
     color: #030303 !important;
 }
-.nav-link:hover, .nav-item:hover{
-    color : #00737f !important;
+.nav-link:hover{
 
+    -webkit-text-stroke-width: 0.5px;
+    -webkit-text-stroke-color: #00737f ;
 }
+
 .nav-item:hover .ulsousmenu{
     display: block;
+
 }
-
-
 ul{
     list-style: none;
     padding: 0; margin: 0
@@ -255,8 +268,8 @@ li a{
     box-shadow: 7px 7px 7px rgba(0, 0, 0, .2);
 }
 .sousmenu:hover{
-    color : #00737f !important;
-
+    -webkit-text-stroke-width: 0.5px;
+    -webkit-text-stroke-color: #00737f ;
 }
 .sousmenu{
     padding: 0.5rem 1rem 0.5rem 1rem;
@@ -267,7 +280,8 @@ li a{
 }
 
 .colorparticulier:hover{
-    color: #e83c69 !important;
+    -webkit-text-stroke-width: 0.5px;
+    -webkit-text-stroke-color: #e83c69;
 }
 
 .rotateAdecio{
@@ -506,6 +520,9 @@ li a{
 .lienrapide:hover{
     text-decoration: none;
     color : #00737f !important;
+}
+.lienrapide:hover h6{
+    /*font-weight: 600;*/
 }
 
 .bi{
