@@ -19,6 +19,17 @@
   font-weight: 400;
 }
 
+.krubBoldItalic {
+  font-family: "Krub", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.krubBold {
+  font-family: "Krub", sans-serif;
+  font-weight: 700;
+}
+
 .clearfix::after {
   display: block;
   clear: both;

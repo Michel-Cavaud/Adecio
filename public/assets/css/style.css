@@ -12,6 +12,9 @@ and open the template in the editor.
     margin-top: 5.5rem;
     margin-bottom: 5.5rem;
 }
+#accompagnerType{
+    margin-top: 5.5rem;
+}
 #scrollUp
 {
     position: fixed;
@@ -41,13 +44,8 @@ and open the template in the editor.
 }
 
 
-.A3:hover .gauche, .M1:hover{
+.A3:hover .gauche, .M1:hover, .meContacter:hover{
     background-color: #338f98 !important;
-    /*font-weight: 600 !important;*/
-}
-
-.A3:hover h5{
-    /*font-weight: 600 !important;*/
 }
 
 
@@ -57,9 +55,7 @@ and open the template in the editor.
 .B3haut:hover .centrehaut{
     background-color: #338f98 !important;
 }
-.B3haut:hover h5{
-    /*font-weight: 600 !important;*/
-}
+
 .B3bas{
     padding: 0;
 }
@@ -74,13 +70,9 @@ and open the template in the editor.
     color: #f7dfe4;
 }
 
-.C3:hover .droite, .Q2:hover{
+.C3:hover .droite, .Q2:hover, .prendreRdv:hover{
     background-color: #ED638C !important;
 }
-.C3:hover h5{
-    /*font-weight: 600 !important;*/
-}
-
 
 .fonddegrade{
     background-color: transparent;
@@ -127,95 +119,7 @@ and open the template in the editor.
 #image{
     background-image: url(../images/flament1920.png);
 }
-@media only screen and (max-width: 320px) {
-    .icone{
-        margin-left: 0px;
-    }
-    #image {
-        background-image: url(../images/flament320.png); 
-    }
-    h3{
-        font-size: 1rem;
-    }
-    h4{
-        font-size: 0.9rem;
-    }
-    h5{
-        font-size: 0.8rem;
-    }
-    h6{
-        font-size: 0.6rem;
-    }
-    .small {
-        font-size: 0.6em;
-    }
-}
-@media only screen and (min-width: 321px) and (max-width: 500px) {
-    .icone{
-        margin-left: 0px;
-    }
-    #image {
-        background-image: url(../images/flament500.png); 
-    }
-}
-@media only screen and (min-width: 501px) and (max-width: 700px) {
 
-    .icone{
-        margin-left: 100px;
-    }
-    #image {
-        background-image: url(../images/flament700.png); 
-    }
-
-
-}
-@media only screen and (min-width: 701px) and  (max-width: 950px) {
-    .icone{
-        margin-left: 100px;
-    }
-    #image {
-        background-image: url(../images/flament950.png); 
-    }
-    .A2, .B2, .C2 { padding:2.5rem 0.5rem 0.5rem 0.5rem !important;}
-    .C1, .B1, .A1 { margin: auto 0 auto 0 !important ; padding: 0.5rem 0 0.5rem 0;}
-    h3{
-        font-size: 1.05rem;
-    }
-    h4{
-        font-size: 1rem;
-    }
-    h5{
-        font-size: 1rem;
-    }
-    h6{
-        font-size: 0.75rem;
-    }
-
-}
-@media only screen and (min-width: 951px) and  (max-width: 1300px) {
-    .icone{
-        margin-left: 100px;
-    }
-    h3{
-        font-size: 1.5rem;
-    }
-    h4{
-        font-size: 1.25rem;
-    }
-    h5{
-        font-size: 1rem;
-    }
-    h6{
-        font-size: 0.75rem;
-    }
-    .C1, .B1, .A1 { margin: 0 1rem 0 1rem !important}
-    .grid-container {
-        grid-template-columns: 9% 24% 5% 24% 5% 24% 9% !important;
-    }
-    .centrebas .centrehaut{
-        padding-bottom: 1.25rem;
-    }
-}
 
 #image-inner {
     display: block;
@@ -236,13 +140,12 @@ and open the template in the editor.
     margin-right: 12px;
 }
 .nav-link{
-
     color: #030303 !important;
 }
 .nav-link:hover{
-
-    -webkit-text-stroke-width: 0.5px;
-    -webkit-text-stroke-color: #00737f ;
+    color: #00737f  !important;
+    -webkit-text-stroke-width: 0.8px !important;
+    -webkit-text-stroke-color: #00737f !important;
 }
 
 .nav-item:hover .ulsousmenu{
@@ -268,7 +171,8 @@ li a{
     box-shadow: 7px 7px 7px rgba(0, 0, 0, .2);
 }
 .sousmenu:hover{
-    -webkit-text-stroke-width: 0.5px;
+    color: #00737f  !important;
+    -webkit-text-stroke-width: 0.8px;
     -webkit-text-stroke-color: #00737f ;
 }
 .sousmenu{
@@ -280,7 +184,8 @@ li a{
 }
 
 .colorparticulier:hover{
-    -webkit-text-stroke-width: 0.5px;
+    color: #e83c69 !important;
+    -webkit-text-stroke-width: 0.8px;
     -webkit-text-stroke-color: #e83c69;
 }
 
@@ -439,10 +344,108 @@ li a{
 .mentions { grid-area: mentions; }
 .debut { grid-area: debut; }
 
+.lienrapide{
+    text-decoration: none;
+    color: black;
+}
+
+.lienrapide:hover{
+    text-decoration: none;
+    color : #00737f !important;
+}
+.lienrapide:hover h6{
+    /*font-weight: 600;*/
+}
+
+.bi{
+    font-size: 1.5rem;
+}
+.bi:hover{
+    font-size: 1.8rem;
+}
 
 
 
-@media (max-width: 700px) {
+/*style type */
+.grid-containerType {
+    display: grid;
+    grid-template-columns: 14% 24% 19.6% 28.6% 14%;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+        ". typeGauche typeCentre typeDroite .";
+}
+.typeGauche { 
+    grid-area: typeGauche;
+    margin-right: 2.5rem;
+}
+.typeCentre { grid-area: typeCentre; }
+.typeDroite { grid-area: typeDroite; }
+
+.typeDroite ul, .typeCentre ul{
+    list-style: disc;
+    margin-bottom: 0.8rem;
+    list-style-position: inside;
+}
+
+.typeDroite ul li {white-space: nowrap;}
+.typeDroite ul div{
+    margin-left: 30px;
+}
+
+.grid-containerTypeCentre {
+    display: grid;
+    grid-template-columns: 14% 24% 19.6% 28.6% 14%;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+        ". typeGaucheCentre typeCentreCentre typeDroitecentre .";
+}
+.typeGaucheCentre{ 
+    grid-area: typeGaucheCentre;
+
+}
+.typeCentreCentre { grid-area: typeCentreCentre;margin-right: 5rem; }
+.typeDroiteCentre { grid-area: typeDroiteCentre; }
+
+.grid-containerTypeBas {
+    display: grid;
+    grid-template-columns: 14% 24% 19.6% 28.6% 14%;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+        ". typeGaucheBas typeCentreBas typeDroiteBas .";
+}
+.typeGaucheBas { 
+    grid-area: typeGaucheBas;
+    margin-right: 5rem;
+}
+.typeCentreBas { grid-area: typeCentreBas;margin-right: 2.5rem; }
+.typeDroiteBas { grid-area: typeDroiteBas;  position: relative;}
+
+.typeCentreBas ul li:before{ content:"- ";}
+
+.grid-containerFooterHaut {
+    display: grid;
+    grid-template-columns: 14% 24% 19.6% 28.6% 14%;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+        ". typeGaucheFooterHaut typeCentreFooterHaut typeDroiteFooterHaut .";
+}
+.typeGaucheFooterHaut { grid-area: typeGaucheFooterHaut; }
+.typeCentreFooterHaut { grid-area: typeCentreFooterHaut; margin-right: 3rem; }
+.typeDroiteFooterHaut { grid-area: typeDroiteFooterHaut;}
+
+.rdvEnBas{
+    position: absolute;
+    bottom: 0;
+    left: 1rem;
+    right: 12rem;
+}
+
+
+@media (max-width: 800px) {
     .grid-container {
         text-align: center;
         grid-template-areas:
@@ -510,27 +513,172 @@ li a{
         transform: rotate(-2deg);
     }
 
+    /*style type */
+    .grid-containerType {
+        display: grid;
+        grid-template-columns: 4% 1fr 4%;
+        grid-template-rows: auto auto auto;
+        gap: 0px 0px;
+        grid-template-areas:
+            ". typeGauche ."
+            ". typeCentre ."
+            ". typeDroite ." ;
+    }
+    .typeGauche, .typeCentre{
+        margin-bottom: 1rem;
+    }
+
+    .grid-containerTypeCentre {
+        display: grid;
+        grid-template-columns: 4% 1fr 4%;
+        grid-template-rows: 1fr;
+        gap: 0px 0px;
+        grid-template-areas:
+            ". typeCentreCentre .";
+    }
+    .typeCentreCentre { grid-area: typeCentreCentre; margin: 0 1rem 0 1rem;}
+
+    .grid-containerTypeBas {
+        display: grid;
+        grid-template-columns: 4% 1fr 4%;
+        grid-template-rows: auto auto auto;
+        gap: 0px 0px;
+        grid-template-areas:
+            ". typeGaucheBas ."
+            ". typeCentreBas ."
+            ". typeDroiteBas .";
+    }
+    .typeGaucheBas { 
+        grid-area: typeGaucheBas;
+        margin-bottom: 1rem;
+        margin-right: 0;
+    }
+    .typeCentreBas { grid-area: typeCentreBas;margin-bottom: 2rem; }
+    .typeDroiteBas { grid-area: typeDroiteBas; }
+
+    .rdvEnBas{
+        position: relative;
+        margin: 1rem 1rem 0 1rem;
+        right: 0;
+        left: 0;
+        
+    }
+
+    .grid-containerFooterHaut {
+        display: grid;
+        grid-template-columns: 4% 1fr 4%;
+        grid-template-rows: auto auto;
+        gap: 0px 0px;
+        grid-template-areas:
+            ". typeCentreFooterHaut ." 
+            ". typeDroiteFooterHaut .";
+    }
+    .typeGaucheFooterHaut { grid-area: typeGaucheFooterHaut; }
+    .typeCentreFooterHaut { grid-area: typeCentreFooterHaut;}
+    .typeDroiteFooterHaut { grid-area: typeDroiteFooterHaut; }
+
 }
 
-.lienrapide{
-    text-decoration: none;
-    color: black;
+@media only screen and (max-width: 320px) {
+    .icone{
+        margin-left: 0px;
+    }
+    #image {
+        background-image: url(../images/flament320.png); 
+    }
+    h3{
+        font-size: 1rem;
+    }
+    h4{
+        font-size: 0.9rem;
+    }
+    h5{
+        font-size: 0.8rem;
+    }
+    h6{
+        font-size: 0.6rem;
+    }
+    .small {
+        font-size: 0.6em;
+    }
+    .rdvEnBas{
+        right: 0rem;
+    }
 }
+@media only screen and (min-width: 321px) and (max-width: 500px) {
+    .icone{
+        margin-left: 0px;
+    }
+    #image {
+        background-image: url(../images/flament500.png); 
+    }
+}
+@media only screen and (min-width: 501px) and (max-width: 700px) {
 
-.lienrapide:hover{
-    text-decoration: none;
-    color : #00737f !important;
-}
-.lienrapide:hover h6{
-    /*font-weight: 600;*/
-}
+    .icone{
+        margin-left: 100px;
+    }
+    #image {
+        background-image: url(../images/flament700.png); 
+    }
+    .rdvEnBas{
+        right: 0rem;
+    }
 
-.bi{
-    font-size: 1.5rem;
 }
-.bi:hover{
-    font-size: 1.8rem;
+@media only screen and (min-width: 701px) and  (max-width: 950px) {
+    .icone{
+        margin-left: 100px;
+    }
+    #image {
+        background-image: url(../images/flament950.png); 
+    }
+    .A2, .B2, .C2 { padding:2.5rem 0.5rem 0.5rem 0.5rem !important;}
+    .C1, .B1, .A1 { margin: auto 0 auto 0 !important ; padding: 0.5rem 0 0.5rem 0;}
+    h3{
+        font-size: 1.05rem;
+    }
+    h4{
+        font-size: 1rem;
+    }
+    h5{
+        font-size: 1rem;
+    }
+    h6{
+        font-size: 0.75rem;
+    }
+
+    .rdvEnBas{
+        right: 2rem;
+    }
+
 }
+@media only screen and (min-width: 951px) and  (max-width: 1300px) {
+    .icone{
+        margin-left: 100px;
+    }
+    h3{
+        font-size: 1.5rem;
+    }
+    h4{
+        font-size: 1.25rem;
+    }
+    h5{
+        font-size: 1rem;
+    }
+    h6{
+        font-size: 0.75rem;
+    }
+    .C1, .B1, .A1 { margin: 0 1rem 0 1rem !important}
+    .grid-container {
+        grid-template-columns: 9% 24% 5% 24% 5% 24% 9% !important;
+    }
+    .centrebas .centrehaut{
+        padding-bottom: 1.25rem;
+    }
 
-
+    .rdvEnBas{
+        right: 5rem;
+    }
+}
 

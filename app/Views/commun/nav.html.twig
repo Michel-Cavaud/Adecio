@@ -7,7 +7,7 @@
                 aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <a class="icone" href="#">
+        <a class="icone" href="{{ base_url() }}">
             <img class="img-fluid" alt="Logo ADECIO" src="{{ base_url('assets/images/ADECIO.png') }}" width="115"/>
         </a>
         <div class="collapse navbar-collapse justify-content-around" id="navbar">
@@ -15,7 +15,7 @@
                 <li class="nav-item">
                     <a class="nav-link dosis" href="#" title="COACHING ENTREPRISE">COACHING ENTREPRISE</a>
                     <ul class="ulsousmenu">
-                        <a class=" dosis sousmenu" href="#">
+                        <a class=" dosis sousmenu" href="{{ base_url('coachingentreprise/coachingindividuel') }}">
                             <li class="">
                                 Coaching individuel
                             </li>
