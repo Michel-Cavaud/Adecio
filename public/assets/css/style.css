@@ -7,6 +7,11 @@ and open the template in the editor.
     Created on : 16 févr. 2021, 16:51:19
     Author     : michel
 */
+.divlogin {
+    background-color: #ffffff;
+    box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.3);
+    color: #00838f;
+}
 
 #accompagner{
     margin-top: 5.5rem;
@@ -142,7 +147,7 @@ and open the template in the editor.
 .nav-link{
     color: #030303 !important;
 }
-.nav-link:hover{
+.colorpro:hover{
     color: #00737f  !important;
     -webkit-text-stroke-width: 0.8px !important;
     -webkit-text-stroke-color: #00737f !important;
