@@ -11,8 +11,8 @@
     <div class="container mb-5">
         <div class="row text-center justify-content-center">
             <div class ="col-md-12 col-lg-8 ">
-                <h3 class="text-txtitre dosisSB text-uppercase" id="tx_0">{{ articles[0].articles | raw }}</h3>
-                <h5 class="text-txcorps krub espacement"  id="tx_1">{{ articles[1].articles | raw}}
+                <h3 class="text-txtitre dosisSB text-uppercase texteditor" id="tx_0">{{ articles[0].articles | raw }}</h3>
+                <h5 class="text-txcorps krub espacement texteditor"  id="tx_1">{{ articles[1].articles | raw}}
                 </h5>
             </div>
 
@@ -20,53 +20,55 @@
     </div>
     <div class="container-fluid pt-2 ml-0 mr-0 fonddegrade">
         <div class="grid-containerType">
-            <div class="typeGauche krubBoldItalic">
-                <p  id="tx_2">{{ articles[2].articles | raw}}</p>
+            <div class="typeGauche krub">
+                <p class="texteditor"  id="tx_2">{{ articles[2].articles | raw}}</p>
 
-                <p  id="tx_3">{{ articles[3].articles | raw}}</p>
+                <p class="texteditor" id="tx_3">{{ articles[3].articles | raw}}</p>
 
-                <p  id="tx_4">{{ articles[4].articles | raw}}<p>
+                <p class="texteditor" id="tx_4">{{ articles[4].articles | raw}}<p>
 
             </div>
 
             <div class="typeCentre">
-                <h5 class="text-txtitre dosisSB text-uppercase"  id="tx_5">{{ articles[5].articles | raw}}
-                    <img class="img-fluid" alt="flèche rose" src="{{ base_url('assets/images/flecherose.png') }}"/>
-                </h5> 
+                <h5 class="text-txtitre dosisSB text-uppercase texteditor"  id="tx_5">{{ articles[5].articles | raw}}</h5> 
 
                 <ul class="krub">
-                    <li  id="tx_6">{{ articles[6].articles | raw}}</li>
-                    <li  id="tx_7">{{ articles[7].articles | raw}}</li>
-                    <li  id="tx_8">{{ articles[8].articles | raw}}</li>
+                    <li class="texteditor"  id="tx_6">{{ articles[6].articles | raw}}</li>
+                    <li class="texteditor"  id="tx_7">{{ articles[7].articles | raw}}</li>
+                    <li class="texteditor" id="tx_8">{{ articles[8].articles | raw}}</li>
                 </ul>
+            </div>
+                
+            <div class="typeFleche">
+                <img class="img-fluid" alt="flèche rose" src="{{ base_url('assets/images/flecherose.png') }}"/>
             </div>
 
             <div class="typeDroite">
-                <h5 class="text-txtitre dosisSB text-uppercase"  id="tx_9">{{ articles[9].articles | raw}}</h5>
+                <h5 class="text-txtitre dosisSB text-uppercase texteditor"  id="tx_9">{{ articles[9].articles | raw}}</h5>
                 <ul>
-                    <li class="krubBold"  id="tx_10">
+                    <li class="krubBold texteditor"  id="tx_10">
                         {{ articles[10].articles | raw}}
                     </li>
-                    <div class="krub pl-1" id="tx_11">{{ articles[11].articles | raw}}</div>
-                    <div class="krub" id="tx_12">{{ articles[12].articles | raw}}</div>
-                    <div class="krub" id="tx_13">{{ articles[13].articles | raw}}</div>
+                    <div class="krub pl-1 texteditor" id="tx_11">{{ articles[11].articles | raw}}</div>
+                    <div class="krub texteditor" id="tx_12">{{ articles[12].articles | raw}}</div>
+                    <div class="krub texteditor" id="tx_13">{{ articles[13].articles | raw}}</div>
 
                 </ul>
                 <ul>
-                    <li class="krubBold" id="tx_14">
+                    <li class="krubBold texteditor" id="tx_14">
                         {{ articles[14].articles | raw}}
                     </li>
-                    <div class="krub" id="tx_15">{{ articles[15].articles | raw}}</div>
-                    <div class="krub" id="tx_16">{{ articles[16].articles | raw}}</div>             
-                    <div class="krub" id="tx_17">{{ articles[17].articles | raw}}</div>
+                    <div class="krub texteditor" id="tx_15">{{ articles[15].articles | raw}}</div>
+                    <div class="krub texteditor" id="tx_16">{{ articles[16].articles | raw}}</div>             
+                    <div class="krub texteditor" id="tx_17">{{ articles[17].articles | raw}}</div>
                 </ul>
                 <ul>
-                    <li class="krubBold" id="tx_18">
+                    <li class="krubBold texteditor" id="tx_18">
                         {{ articles[18].articles | raw}}
                     </li>
-                    <div class="krub" id="tx_19">{{ articles[19].articles | raw}}</div>
-                    <div class="krub"  id="tx_20">{{ articles[20].articles | raw}}</div>
-                    <div class="krub" id="tx_21">{{ articles[21].articles | raw}}</div>
+                    <div class="krub texteditor" id="tx_19">{{ articles[19].articles | raw}}</div>
+                    <div class="krub texteditor"  id="tx_20">{{ articles[20].articles | raw}}</div>
+                    <div class="krub texteditor" id="tx_21">{{ articles[21].articles | raw}}</div>
 
                 </ul>
 
@@ -74,7 +76,7 @@
         </div>
 </section>
 
-<section class="mb-5 bg-white">
+<section class="bg-white">
     <div class="grid-containerTypeCentre">
         <div class="typeGaucheCentre">
 
@@ -87,7 +89,7 @@
             <div class="bg-bgbas meContacter text-txbas dosis centrehaut py-1 roundedBasAdecio text-center">
                 <a href="" class="lienpro"><h5 class="my-auto">ME CONTACTER</h5></a>
             </div> 
-            <h3 class="text-txtitre dosisSB text-uppercase my-3 my-md-5"  id="tx_22">{{ articles[22].articles | raw}}</h3> 
+            <h3 class="text-txtitre dosisSB text-uppercase my-3 my-md-5 texteditor"  id="tx_22">{{ articles[22].articles | raw}}</h3> 
 
         </div>
         <div class="typeDroiteCentre"></div>
@@ -98,29 +100,42 @@
             <img class="img-fluid" alt="" src="{{ base_url('assets/images/imageprovisoire.png') }}"/>
         </div>
         <div class="typeCentreBas ">
-            <h5 class="text-txtitre dosisSB text-uppercase"  id="tx_23">{{ articles[23].articles | raw}}</h5> 
+            <h5 class="text-txtitre dosisSB text-uppercase texteditor"  id="tx_23">{{ articles[23].articles | raw}}</h5> 
+            
             <ul class="krub">
-                <div  id="tx_24">{{ articles[24].articles | raw}}</div>
-                <li  id="tx_25">{{ articles[25].articles | raw}}</li>
-                <li id="tx_26">{{ articles[26].articles | raw}}</li>
-                <li id="tx_27">{{ articles[27].articles | raw}}</li>
+                <span class="krubBold text-bgasdroite">1.&#8239;</span>
+                <span class=" texteditor" id="tx_24">  
+                    {{articles[24].articles | raw}}
+                </span>
+                <li class=" texteditor" id="tx_25">{{ articles[25].articles | raw}}</li>
+                <li class=" texteditor" id="tx_26">{{ articles[26].articles | raw}}</li>
+                <li class=" texteditor" id="tx_27">{{ articles[27].articles | raw}}</li>
 
             </ul>
-            <div class="krub mt-2" id="tx_28">
-                {{ articles[28].articles | raw}}
+            <div class="krub mt-2">
+                <span class="krubBold text-bgasdroite">2.&#8239;</span>
+                <span class=" texteditor" id="tx_28">
+
+                    {{articles[28].articles | raw}}
+                </span>
             </div>
-            <div class="krub mt-2" id="tx_29">
-                {{ articles[29].articles | raw}}
+            <div class="krub mt-2" >
+                <span class="krubBold text-bgasdroite">3.&#8239;</span>
+                <span class=" texteditor" id="tx_29">
+
+                    {{articles[29].articles | raw}}
+                </span>
+
             </div>
 
         </div>
         <div class="typeDroiteBas">
-            <h5 class="text-txtitre dosisSB text-uppercase"  id="tx_30">{{ articles[30].articles | raw}}</h5> 
-            <div class="krubBold" id="tx_31">{{ articles[31].articles | raw}}</div>
-            <div class="krub" id="tx_32">{{ articles[32].articles | raw}}</div>
+            <h5 class="text-txtitre dosisSB text-uppercase texteditor"  id="tx_30">{{ articles[30].articles | raw}}</h5> 
+            <div class="krubBold texteditor" id="tx_31">{{ articles[31].articles | raw}}</div>
+            <div class="krub texteditor" id="tx_32">{{ articles[32].articles | raw}}</div>
 
-            <h5 class="text-txtitre dosisSB text-uppercase mt-2"  id="tx_33">{{ articles[33].articles | raw}}</h5> 
-            <div class="krub" id="tx_34">{{ articles[34].articles | raw}} </div>
+            <h5 class="text-txtitre dosisSB text-uppercase mt-2 texteditor"  id="tx_33">{{ articles[33].articles | raw}}</h5> 
+            <div class="krub texteditor" id="tx_34">{{ articles[34].articles | raw}} </div>
             
             <div class="row rdvEnBas">
                

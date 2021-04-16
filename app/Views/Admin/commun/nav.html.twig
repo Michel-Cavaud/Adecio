@@ -7,7 +7,7 @@
                 aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <a class="icone" href="{{ base_url() }}">
+        <a class="icone" href="{{ base_url('admin') }}">
             <img class="img-fluid" alt="Logo ADECIO" src="{{ base_url('assets/images/ADECIO.png') }}" width="115"/>
         </a>
         <div class="collapse navbar-collapse justify-content-around" id="navbar">
@@ -15,17 +15,17 @@
                 <li class="nav-item">
                     <a class="nav-link colorpro dosis" href="#" title="COACHING ENTREPRISE">COACHING ENTREPRISE</a>
                     <ul class="ulsousmenu">
-                        <a class=" dosis sousmenu" href="{{ base_url('coachingentreprise/coachingindividuel') }}">
+                        <a class=" dosis sousmenu" href="{{ base_url('admin/coachingentreprise/coachingindividuel') }}">
                             <li class="">
                                 Coaching individuel
                             </li>
                         </a>
-                         <a class=" dosis sousmenu" href="{{admin}}{{ base_url('coachingentreprise/coachingequipes') }}">
+                         <a class=" dosis sousmenu" href="{{ base_url('admin/coachingentreprise/coachingequipes') }}">
                             <li class="">
                                 Coaching équipes
                             </li>
                         </a>
-                         <a class="dosis sousmenu" href="{{admin}}{{ base_url('coachingentreprise/coachingorganisations') }}">
+                         <a class="dosis sousmenu" href="{{ base_url('admin/coachingentreprise/coachingorganisations') }}">
                             <li class="">
                                 Coaching Organisations
                             </li>
@@ -34,7 +34,7 @@
 
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link colorparticulier  dosis" href="{{admin}}{{ base_url('coachingparticuliers') }}">COACHING PARTICULIERS</a>
+                    <a class="nav-link colorparticulier  dosis" href="{{ base_url('admin/coachingparticuliers') }}">COACHING PARTICULIERS</a>
                     
                 </li>
                 <li class="nav-item ">

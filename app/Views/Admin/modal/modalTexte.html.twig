@@ -1,0 +1,60 @@
+<!-- Modal -->
+<div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="textModal" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title krubBold" id="exampleModalLongTitle">Modifier le texte</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <button class="btn krubBold actiontext" id="b">G</button>
+                <button class="btn krubBoldItalic actiontext" id="i">I</button>
+                <button class="btn krubBold actiontext" id="s">S</button>
+                {{ form_open('', 'id="formText"') }}
+                <iframe name="frm" id="frm"></iframe>
+                <input type="hidden" value="{{ nomPage }}" name="nompage">
+                <input type="hidden"  name="idtext" id="idtext">
+                <div class="form-group">
+                    <textarea class="form-control" id="textModal" name="textModal" rows="5"></textarea>
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <button type="reset" class="btn btn-secondary" data-dismiss="modal">Annuler</button>
+                <button type="submit" class="btn btn-primary">Enregistrer</button> 
+                {{ form_close() }}
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="modalmessage">
+    <div class="modal-dialog  modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title krubBold">Enregistrement de la page</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>Voulez-vous enregistrer cette page sur le site en ligne ?</p>
+                <div class="my-box d-flex justify-content-center">
+                    <div class="spinner-border text-success visually-hidden" role="status"> </div>
+                    
+                    <h4 class="erreurmessge visually-hidden text-warning"></h4>
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Annuler</button>
+                {{ form_open('', 'id="formenregistrertext"') }}
+                <input type="hidden" value="{{ nomPage }}" name="nompage">
+                <button type="submit" class="btn btn-primary" id="enregistrertexte">Enregistrer</button>
+                {{ form_close() }}
+            </div>
+        </div>
+    </div>
+</div>

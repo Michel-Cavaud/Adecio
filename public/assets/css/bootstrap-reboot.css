@@ -6,29 +6,29 @@
  * Forked from Normalize.css, licensed MIT (https://github.com/necolas/normalize.css/blob/master/LICENSE.md)
  */
 .dosis {
-  font-family: "Dosis", sans-serif;
-  font-weight: 400;
+  font-family: "Dosis", sans-serif !important;
+  font-weight: 400 !important;
 }
 
 .dosisSB {
-  font-family: "Dosis", sans-serif;
-  font-weight: 600;
+  font-family: "Dosis", sans-serif !important;
+  font-weight: 600 !important;
 }
 
 .krub {
-  font-family: "Krub", sans-serif;
-  font-weight: 400;
+  font-family: "Krub", sans-serif !important;
+  font-weight: 400 !important;
 }
 
 .krubBoldItalic {
-  font-family: "Krub", sans-serif;
-  font-weight: 700;
-  font-style: italic;
+  font-family: "Krub", sans-serif !important;
+  font-weight: 700 !important;
+  font-style: italic !important;
 }
 
 .krubBold {
-  font-family: "Krub", sans-serif;
-  font-weight: 700;
+  font-family: "Krub", sans-serif !important;
+  font-weight: 700 !important;
 }
 
 *,

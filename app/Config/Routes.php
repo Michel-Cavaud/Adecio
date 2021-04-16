@@ -32,9 +32,22 @@ $routes->setAutoRoute(true);
 
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
+$routes->group('admin', function ($routes){
+    
+    $routes->get('(:alpha)', 'Admin\Home::index/$1');
+    $routes->get('(:alpha)/(:alpha)', 'Admin\Home::index/$1/$2');
 
-$routes->get('admin', 'Admin/Admin::index');
-$routes->post('admin', 'Admin/Admin::postForm');
+
+    $routes->get('', 'Admin\Admin::index');
+    $routes->post('', 'Admin\Admin::postForm');
+    
+    $routes->post('ajax/(:alpha)', 'Admin\Ajax::$1');
+    
+
+});
+
+
+
 
 $routes->get('/(:alpha)', 'Home::index/$1');
 $routes->get('/(:alpha)/(:alpha)', 'Home::index/$1/$2');

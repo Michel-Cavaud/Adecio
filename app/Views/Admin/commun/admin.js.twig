@@ -1,0 +1,120 @@
+
+
+<script>
+    $(document).ready(function () {
+        var idtx = '';
+        frm.document.designMode = "on";
+
+        $(".texteditor").on('click', (function (e) {
+            idtx = $(this).attr('id');
+            if (idtx != '' & idtx.substr(0, 3) == 'tx_') {
+                $('#textModal').val('');
+                //$('#textModal').val($("#" + idtx).html());
+                var frame = $("#frm").contents().find('body');
+                frame.html($("#" + idtx).html());
+                $('#idtext').val(idtx.substr(3, 6));
+
+                $('#modal').modal('show');
+            }
+        }));
+
+        $(".actiontext").on('click', (function (e) {
+
+            switch ($(this).attr("id")) {
+                case 'b':
+                    frm.document.execCommand('bold', false, null);
+                    break;
+                case 'i':
+                    frm.document.execCommand('italic', false, null);
+                    break;
+                case 's':
+                    frm.document.execCommand('underline', false, null);
+                    break;
+            }
+
+        }));
+
+        $("#formText").on('submit', (function (e) {
+            e.preventDefault();
+            $("#textModal").val($("#frm").contents().find('body').html())
+
+            $.ajax({
+                url: "{{ base_url('admin/ajax/changetext') }}",
+                type: "POST",
+                headers: {'X-Requested-With': 'XMLHttpRequest'},
+                data: $(this).serialize(),
+                dataType: "json",
+                success: function (reponse) {
+                    changeJeton(reponse.csrf_adecio);
+                    $("#" + idtx).html($("#textModal").val());
+                    $('#modal').modal('hide');
+                    idtx = '';
+                },
+                error: function (reponse, ajaxOptions, thrownError) {
+                    idtx = '';
+                }
+            });
+
+        }));
+
+        $("#btnenregistrer").on('click', (function (e) {
+            e.preventDefault();
+            $('#modalmessage').modal('show');
+        }));
+        $("#btncadre").on('click', (function (e) {
+            e.preventDefault();
+            $('.texteditor').each(function () {
+                $(this).toggleClass('borduretexte');
+            });
+        }));
+        $("#btndeconnexion").on('click', (function (e) {
+            e.preventDefault();
+            var formData = new FormData();
+            const csrfvalue = $('#formenregistrertext input[name="csrf_adecio"]').val();
+            const csrfname = "csrf_adecio";
+            formData.append(csrfname, csrfvalue);
+
+            $.ajax({
+                url: "{{ base_url('admin/ajax/deconnexion') }}",
+                type: "POST",
+                headers: {'X-Requested-With': 'XMLHttpRequest'},
+                data: formData,
+                enctype: 'multipart/form-data',
+                processData: false,
+                contentType: false,
+                dataType: "json",
+                success: function (reponse) {
+                    $(location).attr('href', '{{ base_url('admin')}}');
+                }
+            });
+        }));
+
+        $("#formenregistrertext").on('submit', (function (e) {
+            e.preventDefault();
+            $('.spinner-border').toggleClass('visually-hidden');
+            $.ajax({
+                url: "{{ base_url('admin/ajax/enregistrertext') }}",
+                type: "POST",
+                headers: {'X-Requested-With': 'XMLHttpRequest'},
+                data: $(this).serialize(),
+                dataType: "json",
+                success: function (reponse) {
+                    changeJeton(reponse.csrf_adecio);
+                    if (reponse.erreur) {
+                        $('.erreurmessage').toggleClass('visually-hidden');
+                        $('.erreurmessage').text("Erreur sur la sauvegarde merci de contacter l'administrateur");
+                    } else {
+                        $('.spinner-border').toggleClass('visually-hidden');
+                        $('#modalmessage').modal('hide');
+                    }
+                }
+            });
+        }));
+
+        function changeJeton(jeton) {
+            $('input[name="csrf_adecio"').each(function () {
+                $(this).attr("value", jeton);
+            });
+        }
+    });
+</script>
