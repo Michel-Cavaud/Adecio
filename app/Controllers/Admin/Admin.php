@@ -9,6 +9,9 @@
 namespace App\Controllers\admin;
 
 use App\Controllers\BaseController;
+use App\Models\Admin\UtilisateursModel;
+use App\Models\Admin\ArticlesPagesModel;
+use \App\Models\ImagesPagesModel;
 
 /**
  * Description of Admin
@@ -21,14 +24,20 @@ class Admin extends BaseController {
      
      function __construct() {
         $this->session = session();
+        $this->data['titre'] = 'Admin Adecio';
      }
 
     public function index() {
         
         if (isset($this->session->connecte) && $this->session->connecte) {
-            $this->twig->display('Admin/home.html');
+            $articlesPages = new ArticlesPagesModel();
+            $imagesPages = new ImagesPagesModel();
+            $this->data['nomPage'] = 'home';
+            $this->data['articles'] = $articlesPages->findArticlesPage('home');
+            $this->data['images'] = $imagesPages->findImagesPage('home');
+            $this->twig->display('admin\home.html', $this->data);
         }else{
-             $this->twig->display('Admin/baseLogin.html');
+             $this->twig->display('admin/baseLogin.html');
         }
        
     }
@@ -39,13 +48,14 @@ class Admin extends BaseController {
         if ($identifiant == "" | $mdp == "") {
             $this->data['isValidI'] = "is-invalid";
             $this->data['isValidMdp'] = "is-invalid";
-            $this->twig->display('Admin/baseLogin.html', $this->data);
+            $this->twig->display('admin/baseLogin.html', $this->data);
         }else{
             $userConnect = null;
-            $utilisateursModel = new \App\Models\UtilisateursModel;
+            $utilisateursModel = new UtilisateursModel();
             $users = $utilisateursModel->findUtilisateur($identifiant);
             foreach($users as $user){
                 if(password_verify($mdp, $user->mdp)){
+                   
                     $userConnect = $user;
                     break; 
                 }
@@ -53,14 +63,18 @@ class Admin extends BaseController {
         }
 
         if($userConnect != null){
-            $dataSession = ["connecte" => true];
+            $dataSession = ["connecte" => true, 'user' => $userConnect->id];
             $this->session->set($dataSession);
-           
-            $this->twig->display('Admin/home.html');
+            $articlesPages = new ArticlesPagesModel();
+            
+            $this->data['nomPage'] = 'home';
+            $this->data['articles'] = $articlesPages->findArticlesPage('home');
+            $this->data['images'] = $imagesPages->findImagesPage('home');
+            $this->twig->display('admin\home.html', $this->data);
         }else{
             $this->data['messageConnexion'] = "Erreur de connexion merci de vérifier vos identifiants !";
             $this->data['couleur'] = "erreurLogin";
-            $this->twig->display('Admin/baseLogin.html', $this->data);
+            $this->twig->display('admin/baseLogin.html', $this->data);
         }
         
     }
