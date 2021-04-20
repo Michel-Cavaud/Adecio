@@ -9,11 +9,17 @@
 namespace App\Controllers\admin;
 
 use App\Controllers\BaseController;
+
 use App\Entities\UnText;
 use App\Entities\Utilisateurs;
+use App\Entities\UneImage;
+
 use App\Models\Admin\ArticlesPagesModel;
 use App\Models\ArticlesPagesModel as  ArticlesPagesModelUser;
 use App\Models\Admin\UtilisateursModel;
+use App\Models\Admin\ImagesPagesModel;
+use App\Models\ImagesPagesModel as ImagesPagesModelUser;
+
 
 
 /**
@@ -41,14 +47,25 @@ class Ajax extends BaseController{
 
                 if ($fichier->isValid() && !$fichier->hasMoved()) {  
                     $ext = $fichier->getClientExtension();
-                    
                     $data = $this->request->getVar();
                     $page = $data['nompage'];
                     $positionImage = $data['idimage'];
                     
-                    $fichier->move('./assets/images');
-                   $nom =  $fichier->getName();
-                   echo $nom;
+                    $fichier->move('./assets/images/upload');
+                    $nom =  $fichier->getName();
+                    $result['nomImage'] = $nom;
+                    $uneImage = new UneImage();
+                    $uneImage->page = $page;
+                    $uneImage->ext = $ext;
+                    $uneImage->position = $positionImage;
+                    $uneImage->nom = explode('.' , $nom )[0];
+                    
+                    $imageModel = new ImagesPagesModel();
+                    if($imageModel->updateImage($uneImage)){
+                            
+                    }else{
+                        throw new \CodeIgniter\Database\Exceptions\DatabaseException();
+                    }
                 }
             }
         }else{
@@ -99,6 +116,17 @@ class Ajax extends BaseController{
             $articleModelUser = new ArticlesPagesModelUser();
             if($articleModelUser->updateTexte($textesPage)){
                 $result['erreur'] = false;   
+            }
+            
+            if(!$result['erreur']){
+                $imageModel = new ImagesPagesModel();
+                $imagesPage = $imageModel->findImagesPage($data['nompage']);
+                $imageModelUser = new ImagesPagesModelUser();
+                if($imageModelUser->updateImage($imagesPage)){
+                    $result['erreur'] = false;  
+                }else{
+                    $result['erreur'] = true;  
+                }
             }
           
 

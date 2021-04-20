@@ -66,7 +66,7 @@ class Admin extends BaseController {
             $dataSession = ["connecte" => true, 'user' => $userConnect->id];
             $this->session->set($dataSession);
             $articlesPages = new ArticlesPagesModel();
-            
+            $imagesPages = new ImagesPagesModel();
             $this->data['nomPage'] = 'home';
             $this->data['articles'] = $articlesPages->findArticlesPage('home');
             $this->data['images'] = $imagesPages->findImagesPage('home');

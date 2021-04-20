@@ -47,11 +47,6 @@ class ArticlesPagesModel extends Model {
             $flag = false;
         }
 
-
-        if (!$this->db->transStatus()) {
-            $flag = false;
-        }
-
         return $flag;
     }
 
