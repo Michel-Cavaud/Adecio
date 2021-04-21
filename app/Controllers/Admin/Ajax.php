@@ -81,7 +81,7 @@ class Ajax extends BaseController{
     public function changetext(){
         if ($this->request->isAJAX()) {
             $data = $this->request->getVar();
-            
+            //print_r($data);
             $unText = new UnText();
             $unText->text = $data['textModal'];
             $unText->page = $data['nompage'];

@@ -262,7 +262,7 @@ button.close {
 
 }
 ul{
-    list-style: none;
+    /*list-style: none;*/
     padding: 0; margin: 0
 }
 li{
@@ -278,6 +278,9 @@ li a{
     display: none;
     position: absolute;
     box-shadow: 7px 7px 7px rgba(0, 0, 0, .2);
+}
+.ulsousmenu li{
+    list-style: none;
 }
 .sousmenu:hover{
     color: #00737f  !important;
@@ -478,7 +481,7 @@ li a{
 /*style type */
 .grid-containerType {
     display: grid;
-    grid-template-columns: 12% 24% max-content 6% 28.6% 12%;
+    grid-template-columns: 12% 24% 27.4% 6% 28.6% 12%;
     grid-template-rows: 1fr;
     gap: 0px 0px;
     grid-template-areas:
@@ -496,16 +499,11 @@ li a{
 .typeCentre { grid-area: typeCentre; }
 .typeDroite { grid-area: typeDroite; }
 
-.typeDroite ul, .typeCentre ul{
-    list-style: disc;
-    margin-bottom: 0.8rem;
+.typeDroite ul, .typeCentre ul, .typeDroiteBas ul {
     list-style-position: inside;
 }
 
-.typeDroite ul li {white-space: nowrap;}
-.typeDroite ul div{
-    margin-left: 30px;
-}
+
 
 .grid-containerTypeCentre {
     display: grid;
