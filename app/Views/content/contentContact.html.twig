@@ -1,0 +1,91 @@
+<section id="top" >
+    <div class="flament">
+        <div id="image" role="img" aria-label="Trois flaments roses">
+            <span id="image-inner">
+            </span>
+        </div>
+    </div>
+</section>
+
+<section id="accompagnerType">
+    <div class="container mb-5">
+        <div class="row text-center justify-content-center">
+            <div class ="col-md-12 col-lg-8 ">
+                <h3 class="text-txtitre dosisSB text-uppercase texteditor" id="tx_0">{{ articles[0].articles | raw }}Contactez-moi</h3>
+                <h5 class="text-txcorps krub espacement texteditor"  id="tx_1">{{ articles[1].articles | raw}}
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam congue ex a metus laoreet consequat. Sed sed arcu purus.
+                </h5>
+            </div>
+
+        </div>
+    </div>
+    <div class="container-fluid pt-2 ml-0 mr-0 pb-0 fonddegrade">
+        <div class="grid-containerFormation">
+            <div class="gaucheFormation">
+                <p class="texteditor"  id="tx_2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam congue ex a metus laoreet consequat. Sed sed arcu purus. Vestibulum molestie ipsum mi, eu gravida.</p>
+
+                <p class="texteditor" id="tx_3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam congue ex a metus laoreet consequat. Sed sed arcu purus. Vestibulum molestie ipsum mi, eu gravida.</p>
+
+                <p class="texteditor" id="tx_4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam congue ex a metus laoreet consequat. Sed sed arcu purus. Vestibulum molestie ipsum mi, eu gravida.<p>
+            </div>
+            <div class="centreFormation pb-5">
+                {{ form_open('', 'id="formContact"') }}
+                <div class="row">
+                    <div class="form-group col-sm-6">
+                        <label for="name" class="text-txtitre dosisSB text-uppercase">Name</label>
+                        <div class="input-group">
+                            
+                            <input type="text" class="form-control" id="name" placeholder="Votre nom" required>
+                            <div class="invalid-feedback">Indiquer votre nom ou Prénom</div>
+                        </div>
+                    </div>
+                    <div class="form-group col-sm-6">
+                        <label for="email" class="text-txtitre dosisSB text-uppercase">Email</label>
+                        <div class="input-group">
+                            
+                            <input type="email" class="form-control" id="email" placeholder="Votre email" required>
+                            <div class="invalid-feedback">Indiquer votre email</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group mt-2 mb-2">
+                    <label for="message" class="text-txtitre dosisSB text-uppercase">Message</label>
+                    <div class="input-group">
+                        
+                        <textarea id="message" class="form-control" rows="5" placeholder="Votre message" required></textarea>
+                        <div class="invalid-feedback">Indiquer votre message</div>
+                    </div>
+                </div>
+                <div class="d-flex justify-content-end">
+                    <button type="submit" id="form-submit" class="btn btn-success btn-lg ">Envoyer</button> 
+                </div>
+                {{ form_close() }}
+                <div id="msgSubmit" class="text-center invisible">Message envoyé</div>
+            </div>
+            <div class="droiteFormation">
+                <div class="row justify-content-end">
+                    <div class="container text-center mb-2">
+                        <img class="img-fluid" alt="Logo ADECIO" src="{{ base_url('assets/images/karine.jpg') }}" width="50%"/>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-6 krub">
+                            <h6>Karine Corbière</h6>
+                            <a href="" class="lienrapide"><h6>k.corbiere@adecio.fr</h6></a>
+                            <h6>06 15 33 72 64</h6>
+                        </div>
+                        <div class="col-6">
+                            <a href="" class="bi bi-facebook"  style=" color:#3b5998;"></a>
+                            <a href=""  class="bi bi-whatsapp" style=" color: #4AC959;"></a>
+                            <a href=""  class="bi bi-twitter" style=" color:#00acee;"></a>
+                            <a href=""  class="bi bi-instagram" style=" color: #3f729b ;"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</section>
+

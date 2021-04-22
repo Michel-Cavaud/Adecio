@@ -11,24 +11,35 @@ class Home extends BaseController {
 
     public function index($page = '', $souspage = '') {
 
-        $arrayPages = array('coachingentreprise', 'coachingparticuliers', 'formation', 'adecio', 'contact');
+        $arrayPages = array('coachingentreprise', 'coachingparticuliers', 'formations', 'adecio', 'contact');
         $arraySousPage = array('coachingindividuel', 'coachingequipes', 'coachingorganisations',
-            'formation 1', 'formation 2', 'formation 3', 'formation 4', 'formation 5', 'lacoach', 'lesvaleurs');
+            'formation1', 'formation2', 'formation3', 'formation4', 'formation5', 'lacoach', 'lesvaleurs');
 
         $articlesPages = new ArticlesPagesModel();
         $imagesPages = new ImagesPagesModel();
 
         $this->data['titre'] = 'Adecio';
 
-        
+        echo $page;
+        echo $souspage;
         if (in_array($page, $arrayPages) & $souspage == '') {
             $this->data['articles'] = $articlesPages->findArticlesPage($page);
             $this->data['images'] = $imagesPages->findImagesPage($page);
-            $this->twig->display('type.html', $this->data);
+            if($page == 'contact'){
+                 $this->twig->display('contact.html', $this->data); 
+            }else{
+                $this->twig->display('type.html', $this->data); 
+            }
+           
         } elseif (in_array($page, $arrayPages) & in_array($souspage, $arraySousPage)) {
             $this->data['articles'] = $articlesPages->findArticlesPage($souspage);
             $this->data['images'] = $imagesPages->findImagesPage($souspage);
-            $this->twig->display('type.html', $this->data);
+            if($page == 'formations'){
+                $this->twig->display('typeFormations.html', $this->data);
+            }else{
+               $this->twig->display('type.html', $this->data); 
+            }
+            
         } else {
             $this->data['articles'] = $articlesPages->findArticlesPage('home');
             $this->data['images'] = $imagesPages->findImagesPage('home');

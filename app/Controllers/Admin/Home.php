@@ -20,9 +20,9 @@ class Home extends BaseController {
             header("location:" . base_url('admin'));
         } else {
 
-            $arrayPages = array('coachingentreprise', 'coachingparticuliers', 'formation', 'adecio', 'contact');
+            $arrayPages = array('coachingentreprise', 'coachingparticuliers', 'formations', 'adecio', 'contact');
             $arraySousPage = array('coachingindividuel', 'coachingequipes', 'coachingorganisations',
-                'formation 1', 'formation 2', 'formation 3', 'formation 4', 'formation 5', 'lacoach', 'lesvaleurs');
+                'formation1', 'formation2', 'formation3', 'formation4', 'formation 5', 'lacoach', 'lesvaleurs');
 
             $articlesPages = new ArticlesPagesModel();
             $imagesPages = new ImagesPagesModel();
@@ -33,12 +33,20 @@ class Home extends BaseController {
                 $this->data['nomPage'] = $page;
                 $this->data['articles'] = $articlesPages->findArticlesPage($page);
                 $this->data['images'] = $imagesPages->findImagesPage($page);
-                $this->twig->display('admin\type.html', $this->data);
+                if ($page == 'contact') {
+                    $this->twig->display('admin/contact.html', $this->data);
+                } else {
+                    $this->twig->display('admin/type.html', $this->data);
+                }
             } elseif (in_array($page, $arrayPages) & in_array($souspage, $arraySousPage)) {
                 $this->data['nomPage'] = $souspage;
                 $this->data['articles'] = $articlesPages->findArticlesPage($souspage);
                 $this->data['images'] = $imagesPages->findImagesPage($souspage);
-                $this->twig->display('admin\type.html', $this->data);
+                if ($page == 'formations') {
+                    $this->twig->display('admin/typeFormations.html', $this->data);
+                } else {
+                    $this->twig->display('admin/type.html', $this->data);
+                }
             } else {
                 $this->data['nomPage'] = 'home';
                 $this->data['articles'] = $articlesPages->findArticlesPage('home');

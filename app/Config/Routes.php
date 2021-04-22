@@ -34,14 +34,14 @@ $routes->setAutoRoute(true);
 // route since we don't have to scan directories.
 $routes->group('admin', function ($routes){
     
-    $routes->get('(:alpha)', 'Admin\Home::index/$1');
-    $routes->get('(:alpha)/(:alpha)', 'Admin\Home::index/$1/$2');
+    $routes->get('(:any)', 'Admin\Home::index/$1');
+    $routes->get('(:any)/(:any)', 'Admin\Home::index/$1/$2');
 
 
     $routes->get('', 'Admin\Admin::index');
     $routes->post('', 'Admin\Admin::postForm');
     
-    $routes->post('ajax/(:alpha)', 'Admin\Ajax::$1');
+    $routes->post('ajax/(:any)', 'Admin\Ajax::$1');
     
 
 });
@@ -49,8 +49,8 @@ $routes->group('admin', function ($routes){
 
 
 
-$routes->get('/(:alpha)', 'Home::index/$1');
-$routes->get('/(:alpha)/(:alpha)', 'Home::index/$1/$2');
+$routes->get('/(:any)', 'Home::index/$1');
+$routes->get('/(:any)/(:any)', 'Home::index/$1/$2');
 
 //$routes->get('/type', 'Home::type');
 

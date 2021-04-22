@@ -116,6 +116,7 @@ button.close {
 
 .borduretexte{
     border: 1px #00737f dotted;
+    padding: 1px;
 }
 
 
@@ -556,6 +557,18 @@ li a{
     right: 12rem;
 }
 
+/*formation*/
+.grid-containerFormation {
+  display: grid;
+  grid-template-columns: 1fr 3fr  3fr 3fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    ". gaucheFormation centreFormation droiteFormation .";
+}
+.gaucheFormation { grid-area: gaucheFormation; margin-right : 2rem; }
+.centreFormation { grid-area: centreFormation;  margin-right : 2rem; position: relative;padding-bottom: 17rem;}
+.droiteFormation { grid-area: droiteFormation; }
 
 @media (max-width: 800px) {
     .grid-container {
