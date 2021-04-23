@@ -20,8 +20,6 @@ class Home extends BaseController {
 
         $this->data['titre'] = 'Adecio';
 
-        echo $page;
-        echo $souspage;
         if (in_array($page, $arrayPages) & $souspage == '') {
             $this->data['articles'] = $articlesPages->findArticlesPage($page);
             $this->data['images'] = $imagesPages->findImagesPage($page);

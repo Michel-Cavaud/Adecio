@@ -23,7 +23,8 @@
         <div class="grid-containerFormation">
             <div class="gaucheFormation">
                 <div class="container text-">
-                    <img class="img-fluid imageeditor mb-5" id="img_1" alt="" src="https://picsum.photos/500?random=1"/>
+                    <img class="img-fluid imageeditor mb-5" data-image="{{ images[1].nom}}.{{ images[1].ext}}"
+                         id="img_1" alt="" src="{{base_url('assets/images/upload')}}/{{ images[1].nom}}.{{ images[1].ext}}"/>
                 </div>
                 <h5 class="text-txtitre dosisSB text-uppercase texteditor"  id="tx_2">{{ articles[2].articles | raw }}</h5>
                 <div class="krub texteditor mb-2" id="tx_3">{{ articles[3].articles | raw }}</div> 
@@ -40,7 +41,7 @@
 
                 <h5 class="text-txtitre dosisSB text-uppercase texteditor"  id="tx_10">{{ articles[10].articles | raw }}</h5>
                 <div class="krub texteditor mb-2" id="tx_11">{{ articles[11].articles | raw }}</div> 
-                
+
 
                 <h5 class="text-txtitre dosisSB text-uppercase texteditor"  id="tx_12">{{ articles[12].articles | raw }}</h5>
                 <div class="krub texteditor mb-2" id="tx_13">{{ articles[13].articles | raw }}</div> 
@@ -57,7 +58,7 @@
                 <h5 class="text-txtitre dosisSB text-uppercase texteditor"  id="tx_20">{{ articles[20].articles | raw }}</h5>
                 <div class="krub texteditor mb-2" id="tx_21">{{ articles[21].articles | raw }}</div> 
 
-               
+
             </div>
             <div class="centreFormation">
                 <h5 class="text-txtitre dosisSB text-uppercase texteditor"  id="tx_22">{{ articles[22].articles | raw }}</h5>
@@ -76,11 +77,12 @@
                 <h5 class="text-txtitre dosisSB text-uppercase texteditor"  id="tx_30">{{ articles[30].articles | raw }}</h5>
                 <div class="krub texteditor mb-2" id="tx_31">{{ articles[31].articles | raw }}
                 </div> 
-                
+
                 <div class="container text-center">
-                    <img class="img-fluid imageeditor mb-5 mt-5" id="img_2" alt="" src="https://picsum.photos/500?random=2"/>
+                    <img class="img-fluid imageeditor mb-5 mt-5" data-image="{{ images[2].nom}}.{{ images[2].ext}}"
+                         id="img_2" alt="" src="{{base_url('assets/images/upload')}}/{{ images[2].nom}}.{{ images[2].ext}}"/>
                 </div>
-                  
+
                 <h5 class="text-txtitre dosisSB text-uppercase texteditor"  id="tx_32">{{ articles[32].articles | raw }}</h5>
                 <div class="krub texteditor mb-2" id="tx_33">{{ articles[33].articles | raw }}
                 </div> 
@@ -95,29 +97,17 @@
                 <h5 class="text-txtitre dosisSB text-uppercase texteditor"  id="tx_38">{{ articles[38].articles | raw }}</h5>
                 <div class="krub texteditor mb-2" id="tx_39">{{ articles[39].articles | raw }}
                 </div> 
-                
-                 <h5 class="text-txtitre dosisSB text-uppercase texteditor"  id="tx_40">{{ articles[40].articles | raw }}</h5>
+
+                <h5 class="text-txtitre dosisSB text-uppercase texteditor"  id="tx_40">{{ articles[40].articles | raw }}</h5>
                 <div class="krub texteditor mb-2" id="tx_41">{{ articles[41].articles | raw }}
                 </div> 
 
-                <div class="row rdvEnBas">
 
-                    <div class="roundedHautAdecio prendreRdv bg-bgasdroite text-txbas pt-2 mb-0 dosis text-center">
-                        <a href="" class="lienperso" >
-                            <h5 class=" mb-0">PRENDRE RENDEZ-VOUS</h5>
-                        </a>
-                    </div>
-
-                    <div class="bg-bgasdroite gauchepro">
-                        <div class="trianglepInv m-auto"></div>
-                    </div>
-
-
-                </div>
             </div>
             <div class="droiteFormation">
                 <div class="container text-right">
-                    <img class="img-fluid imageeditor mb-5" id="img_3" alt="" src="https://picsum.photos/500?random=3"/>
+                    <img class="img-fluid imageeditor mb-5"  data-image="{{ images[3].nom}}.{{ images[3].ext}}"
+                         id="img_3" alt="" src="{{base_url('assets/images/upload')}}/{{ images[3].nom}}.{{ images[3].ext}}"/>
                 </div>
                 <h5 class="text-txtitre dosisSB text-uppercase texteditor"  id="tx_42">{{ articles[42].articles | raw }}</h5>
                 <div class="krub texteditor mb-2" id="tx_43">{{ articles[43].articles | raw }}</div> 
@@ -134,7 +124,7 @@
 
                 <h5 class="text-txtitre dosisSB text-uppercase texteditor"  id="tx_50">{{ articles[50].articles | raw }}</h5>
                 <div class="krub texteditor mb-2" id="tx_51">{{ articles[51].articles | raw }}</div> 
-                
+
 
                 <h5 class="text-txtitre dosisSB text-uppercase texteditor"  id="tx_52">{{ articles[52].articles | raw }}</h5>
                 <div class="krub texteditor mb-2" id="tx_53">{{ articles[53].articles | raw }}</div> 
@@ -152,7 +142,55 @@
                 <div class="krub texteditor mb-2" id="tx_61">{{ articles[61].articles | raw }}</div> 
 
             </div>
+            <div class="centreBasFormation">
+                <div class="row">
+
+                    <div class="roundedHautAdecio prendreRdv bg-bgasdroite text-txbas pt-2 mb-0 dosis text-center">
+                        <a href="{{ base_url('contact#accompagnerType') }}" class="lienperso" >
+                            <h5 class=" mb-0">ME CONTACTER</h5>
+                        </a>
+                    </div>
+
+                    <div class="bg-bgasdroite gauchepro">
+                        <div class="trianglepInv m-auto"></div>
+                    </div>
+
+
+                </div>
+
+            </div>
         </div>
 
 
 </section>
+                
+<script>
+    $(document).ready(function() {
+      
+        $('.prendreRdv').on("mouseover", function () {
+            $('.gauchepro').removeClass('bg-bgasdroite');
+            $('.gauchepro').css("background-color", '#ED638C');
+            
+        });
+        $('.prendreRdv').on("mouseout", function () {
+            $('.gauchepro').addClass('bg-bgasdroite');
+            $('.gauchepro').css("background-color", '');
+            
+        });
+
+
+        $(window).scroll(function () { 
+            if ($(this).scrollTop() >= 200 ) {  
+               
+                $('#scrollUp').css("visibility", "visible");
+                $('#scrollUp').css('bottom','50px');
+                console.log('sup');
+            } else { 
+               
+                $('#scrollUp').css('visibility','');
+               
+                console.log('inf');
+            }
+        });
+    });
+</script>

@@ -65,7 +65,7 @@
                 <div class="trianglep m-auto"></div>
             </div>        
             <div class="bg-bgbas meContacter text-txbas dosis centrehaut py-1 roundedBasAdecio text-center">
-                <a href="" class="lienpro"><h5 class="my-auto">ME CONTACTER</h5></a>
+                <a href="{{ base_url('contact#accompagnerType') }}" class="lienpro"><h5 class="my-auto">ME CONTACTER</h5></a>
             </div> 
             <h3 class="text-txtitre dosisSB text-uppercase my-3 my-md-5 texteditor"  id="tx_22">{{ articles[22].articles | raw}}</h3> 
 
@@ -75,7 +75,7 @@
 
     <div class="grid-containerTypeBas">
         <div class="typeGaucheBas">
-            <img class="img-fluid imageeditor" id="img_1" alt="" src="{{base_url('assets/images/upload')}}/{{ images[1].nom}}.{{ images[1].ext}}"/>
+            <img class="img-fluid imageeditor" data-image="{{ images[1].nom}}.{{ images[1].ext}}" id="img_1" alt="" src="{{base_url('assets/images/upload')}}/{{ images[1].nom}}.{{ images[1].ext}}"/>
         </div>
         <div class="typeCentreBas ">
             <h5 class="text-txtitre dosisSB text-uppercase texteditor"  id="tx_23">{{ articles[23].articles | raw}}</h5> 
@@ -97,7 +97,7 @@
             <div class="row rdvEnBas">
                
                     <div class="roundedHautAdecio prendreRdv bg-bgasdroite text-txbas pt-2 mb-0 dosis text-center">
-                        <a href="" class="lienperso" >
+                        <a href="mailto:k.corbiere@adecio.fr?subject=Message%20du%20site%20Adecio&body=Bonjour%20Karine" class="lienperso" >
                             <h5 class=" mb-0">PRENDRE RENDEZ-VOUS</h5>
                         </a>
                     </div>
@@ -116,7 +116,7 @@
 
 </section>
         
-        <script>
+<script>
     $(document).ready(function() {
         $('.meContacter').on("mouseover", function () {
             $('.centrehaut').removeClass('bg-bgbas');

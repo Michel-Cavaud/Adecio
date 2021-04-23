@@ -22,7 +22,7 @@ class Home extends BaseController {
 
             $arrayPages = array('coachingentreprise', 'coachingparticuliers', 'formations', 'adecio', 'contact');
             $arraySousPage = array('coachingindividuel', 'coachingequipes', 'coachingorganisations',
-                'formation1', 'formation2', 'formation3', 'formation4', 'formation 5', 'lacoach', 'lesvaleurs');
+                'formation1', 'formation2', 'formation3', 'formation4', 'formation5', 'lacoach', 'lesvaleurs');
 
             $articlesPages = new ArticlesPagesModel();
             $imagesPages = new ImagesPagesModel();
