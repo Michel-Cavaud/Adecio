@@ -11,9 +11,8 @@
     <div class="container mb-5">
         <div class="row text-center justify-content-center">
             <div class ="col-md-12 col-lg-8 ">
-                <h3 class="text-txtitre dosisSB text-uppercase texteditor" id="tx_0">{{ articles[0].articles | raw }}Contactez-moi</h3>
+                <h3 class="text-txtitre dosisSB text-uppercase texteditor" id="tx_0">{{ articles[0].articles | raw }}</h3>
                 <h5 class="text-txcorps krub espacement texteditor"  id="tx_1">{{ articles[1].articles | raw}}
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam congue ex a metus laoreet consequat. Sed sed arcu purus.
                 </h5>
             </div>
 
@@ -22,11 +21,11 @@
     <div class="container-fluid pt-2 ml-0 mr-0 pb-0 fonddegrade">
         <div class="grid-containerContact pb-5">
             <div class="gaucheContact">
-                <p class="texteditor"  id="tx_2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam congue ex a metus laoreet consequat. Sed sed arcu purus. Vestibulum molestie ipsum mi, eu gravida.</p>
+                <p class="texteditor"  id="tx_2">{{ articles[2].articles | raw }}</p>
 
-                <p class="texteditor" id="tx_3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam congue ex a metus laoreet consequat. Sed sed arcu purus. Vestibulum molestie ipsum mi, eu gravida.</p>
+                <p class="texteditor" id="tx_3">{{ articles[3].articles | raw }}</p>
 
-                <p class="texteditor" id="tx_4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam congue ex a metus laoreet consequat. Sed sed arcu purus. Vestibulum molestie ipsum mi, eu gravida.<p>
+                <p class="texteditor" id="tx_4">{{ articles[4].articles | raw }}<p>
             </div>
             <div class="centreContact pb-5">
                 {{ form_open('', 'id="formContact"') }}
@@ -65,7 +64,7 @@
             <div class="droiteContact">
                 <div class="row justify-content-end">
                     <div class="container text-center mb-4">
-                        <img class="img-fluid" alt="Logo ADECIO" src="{{ base_url('assets/images/karine.jpg') }}" width="40%"/>
+                        <img class="img-fluid" alt="Karine" src="{{ base_url('assets/images/Karine.jpg') }}" width="40%"/>
                     </div>
 
                     <div class="row">

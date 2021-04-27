@@ -220,6 +220,15 @@
         height: 100%;
 
     }
+    
+    .fonddegradeadecio{
+        background-position: bottom;
+        
+        background-size: contain;
+       
+        background-repeat: no-repeat;
+        background-image: url({{base_url('assets/images')}}/fondhautadecio2500.png);
+    }
 
     .flament{
         margin-top: 55px;
@@ -475,7 +484,7 @@
         text-decoration: none;
         color : #00737f !important;
     }
-     .liencopyright{
+    .liencopyright{
         text-decoration: none;
         color: white;
     }
@@ -484,7 +493,7 @@
         text-decoration: none;
         color : #00737f !important;
     }
-    
+
     .lienrapide:hover h6{
         /*font-weight: 600;*/
     }
@@ -603,6 +612,76 @@
     .gaucheContact { grid-area: gaucheContact; margin-right : 4rem; }
     .centreContact { grid-area: centreContact;  margin-right : 2rem;}
     .droiteContact { grid-area: droiteContact;  margin-left : 2rem;}
+
+    
+    /*grille adecio haut grid.layoutit.com?id=R8skjEQ */
+    .grid-container-adecio-haut {
+      display: grid;
+      grid-template-columns: 12% 24% 17% 6% 29% 12%;
+      grid-template-rows: 1fr 1fr 1fr;
+      gap: 0px 0px;
+      grid-template-areas:
+        ". gauchehautadecio centreadecio flecheadecio droiteadecio ."
+        ". gauchecentreadecio centreadecio flecheadecio droiteadecio ."
+        ". gauchecentreadecio centreadecio flecheadecio droiteadecio .";
+    }
+
+    .gauchehautadecio { grid-area: gauchehautadecio; margin-right: 3rem;}
+
+    .droiteadecio {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 0.5fr 0.3fr 1.2fr;
+      gap: 0px 0px;
+      grid-template-areas:
+        "droitehautadecio"
+        "droitecentreadecio"
+        "droitebasadecio";
+      grid-area: droiteadecio;
+    }
+
+    .droitehautadecio { grid-area: droitehautadecio; }
+
+    .droitecentreadecio { grid-area: droitecentreadecio; }
+
+    .droitebasadecio { grid-area: droitebasadecio; }
+
+    .gauchecentreadecio { grid-area: gauchecentreadecio; margin-right : 3rem; }
+
+    .centreadecio {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 0.5fr 0.5fr 1fr;
+      gap: 0px 0px;
+      grid-template-areas:
+        "centrehautadecio"
+        "centrecentreadecio"
+        "centrebasadecio";
+      grid-area: centreadecio;
+    }
+
+    .centrehautadecio { grid-area: centrehautadecio; }
+
+    .centrecentreadecio { grid-area: centrecentreadecio; }
+
+    .centrebasadecio { grid-area: centrebasadecio; }
+
+    .flecheadecio {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 0.5fr 0.5fr 1fr;
+      gap: 0px 0px;
+      grid-template-areas:
+        "flechehautadecio"
+        "flechecentreadecio"
+        ".";
+      grid-area: flecheadecio;
+    }
+
+    .flechehautadecio { grid-area: flechehautadecio; }
+
+    .flechecentreadecio { grid-area: flechecentreadecio; }
+
 
     @media (max-width: 800px) {
         .grid-container {

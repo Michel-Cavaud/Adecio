@@ -1,0 +1,169 @@
+<!-- Modal -->
+<div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="textModal" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title krubBold" id="exampleModalLongTitle">Modifier le texte</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                 <!--<button class="btn krubBold actiontext" id="b">G</button>
+                <button class="btn krubBoldItalic actiontext" id="i">I</button>
+                <button class="btn krubBold actiontext" id="s">S</button>-->
+                {{ form_open('', 'id="formText"') }}
+                <!--<iframe name="frm" id="frm"></iframe>-->
+                <input type="hidden" value="{{ nomPage }}" name="nompage">
+                <input type="hidden"  name="idtext" id="idtext">
+                <div class="form-group">
+                    <textarea class="form-control" id="textModal" name="textModal" rows="5"></textarea>
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <button type="reset" class="btn btn-secondary" data-dismiss="modal">Annuler</button>
+                <button type="submit" class="btn btn-primary">Enregistrer</button> 
+                {{ form_close() }}
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="modalmessage">
+    <div class="modal-dialog  modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title krubBold">Enregistrement de la page</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>Voulez-vous enregistrer cette page sur le site en ligne ?</p>
+                <div class="my-box d-flex justify-content-center">
+                    <div class="spinner-border text-success visually-hidden" role="status"> </div>
+
+                    <h4 class="erreurmessge visually-hidden text-warning"></h4>
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Annuler</button>
+                {{ form_open('', 'id="formenregistrertext"') }}
+                <input type="hidden" value="{{ nomPage }}" name="nompage">
+                <button type="submit" class="btn btn-primary" id="enregistrertexte">Enregistrer</button>
+                {{ form_close() }}
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="majMdpModal" tabindex="-1" role="dialog" aria-labelledby="ModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header border-bottom-0">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="row  justify-content-center">
+                    <div class="col-lg-8 col-md-10">
+                        <div class=text-center>
+                            <h2>Mise à jour de votre mot de passe</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="row  justify-content-center">
+                    <div class="col-md-12 col-lg-6">
+
+                        {{ form_open('', 'id="majMDP"') }}
+                        <div class="form-group">
+                            <label class="col-form-label" for="identifiant">Votre mot de passe actuel</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"><span class="bi bi-key-fill" ></span></span>
+                                </div>
+                                <input type="password" class="form-control" placeholder="Mot de passe actuel" id="mdpActuel" name="mdpActuel" >
+                                <div class="invalid-feedback">Indiquer votre mot de passe actuel</div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-form-label" for="mdp">Nouveau mot de passe</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"><span class="bi bi-key-fill" ></span></span>
+                                </div>
+                                <input type="password" class="form-control" placeholder="Nouveau mot de passe" id="mdpNouveau1" name="mdpNouveau1">
+                                <div class="invalid-feedback">Indiquer votre nouveau mot de passe </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-form-label" for="mdp">Nouveau mot de passe</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"><span class="bi bi-key-fill" ></span></span>
+                                </div>
+                                <input type="password" class="form-control" placeholder="Nouveau mot de passe" id="mdpNouveau2" name="mdpNouveau2">
+                                <div class="invalid-feedback">Indiquer votre nouveau mot de passe</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12 col-lg-5 align-self-end">
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar"  aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                        <ul class="list-unstyled">
+                            <li><small class="text-danger listMdp">Au moins une minuscule</small></li>
+                            <li><small class="text-danger listMdp">Au moins une majuscule</small></li>
+                            <li><small class="text-danger listMdp">Au moins un chiffre</small></li>
+                            <li><small class="text-danger listMdp">Au moins un caractère spécial ($, @, $, !, %, *, #, ?, &)</small></li>
+                            <li><small class="text-danger listMdp">Au moins 8 caractères</small></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row  justify-content-center">
+                    <div class="text-center mt-5">
+                        <button type="submit" class="btn btn-primary btn-lg mb-2 px-3 ">Valider</button>
+                    </div>
+                    {{ form_close() }}
+                </div>
+                <div class="row  justify-content-center">
+                    <div class="alert alert-dismissible collapse" id="mdpInfo">
+                        <strong id="messageMdp"></strong> 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="modalimage" tabindex="-1" role="dialog" aria-labelledby="textModal" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title krubBold" id="exampleModalLongTitle">Modifier l'image</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                
+                {{ form_open('', 'id="formImage" enctype="multipart/form-data"') }}
+               
+                <input type="hidden" value="{{ nomPage }}" name="nompage">
+                <input type="hidden"  name="idimage" id="idimage">
+                <div class="form-group">
+                    <input type="file" name="imageupload" id="imageupload"/>
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <button type="reset" class="btn btn-secondary" data-dismiss="modal">Annuler</button>
+                <button type="submit" class="btn btn-primary">Enregistrer</button> 
+                {{ form_close() }}
+            </div>
+        </div>
+    </div>
+</div>
