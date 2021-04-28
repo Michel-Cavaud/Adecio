@@ -220,12 +220,12 @@
         height: 100%;
 
     }
-    
+
     .fonddegradeadecio{
         background-position: bottom;
-        
+
         background-size: contain;
-       
+
         background-repeat: no-repeat;
         background-image: url({{base_url('assets/images')}}/fondhautadecio2500.png);
     }
@@ -613,77 +613,101 @@
     .centreContact { grid-area: centreContact;  margin-right : 2rem;}
     .droiteContact { grid-area: droiteContact;  margin-left : 2rem;}
 
-    
-    /*grille adecio haut grid.layoutit.com?id=R8skjEQ */
-    .grid-container-adecio-haut {
-      display: grid;
-      grid-template-columns: 12% 24% 17% 6% 29% 12%;
-      grid-template-rows: 1fr 1fr 1fr;
-      gap: 0px 0px;
-      grid-template-areas:
-        ". gauchehautadecio centreadecio flecheadecio droiteadecio ."
-        ". gauchecentreadecio centreadecio flecheadecio droiteadecio ."
-        ". gauchecentreadecio centreadecio flecheadecio droiteadecio .";
+
+    /*grille adecio haut  */
+    .grid-container-adecio-haut { /*! grid.layoutit.com?id=i9nXGcq*/
+        display: grid;
+        grid-template-columns: 12% 24% 17% 6% 29% 12%;
+        grid-template-rows: auto 1fr;
+        gap: 0px 0px;
+        grid-template-areas:
+            ". gauchehautadecio centrehautadecio flechehautadecio droitehautadecio ."
+            ". gauchebasadecio centrebasadecio flechebasadecio droitebasadecio .";
     }
-
-    .gauchehautadecio { grid-area: gauchehautadecio; margin-right: 3rem;}
-
-    .droiteadecio {
-      display: grid;
-      grid-template-columns: 1fr;
-      grid-template-rows: 0.5fr 0.3fr 1.2fr;
-      gap: 0px 0px;
-      grid-template-areas:
-        "droitehautadecio"
-        "droitecentreadecio"
-        "droitebasadecio";
-      grid-area: droiteadecio;
-    }
-
-    .droitehautadecio { grid-area: droitehautadecio; }
-
-    .droitecentreadecio { grid-area: droitecentreadecio; }
-
-    .droitebasadecio { grid-area: droitebasadecio; }
-
-    .gauchecentreadecio { grid-area: gauchecentreadecio; margin-right : 3rem; }
-
-    .centreadecio {
-      display: grid;
-      grid-template-columns: 1fr;
-      grid-template-rows: 0.5fr 0.5fr 1fr;
-      gap: 0px 0px;
-      grid-template-areas:
-        "centrehautadecio"
-        "centrecentreadecio"
-        "centrebasadecio";
-      grid-area: centreadecio;
-    }
-
+    .gauchehautadecio { grid-area: gauchehautadecio; margin-right : 3rem; }
+    .gauchebasadecio { grid-area: gauchebasadecio;margin-right : 3rem; }
     .centrehautadecio { grid-area: centrehautadecio; }
-
-    .centrecentreadecio { grid-area: centrecentreadecio; }
-
     .centrebasadecio { grid-area: centrebasadecio; }
-
-    .flecheadecio {
-      display: grid;
-      grid-template-columns: 1fr;
-      grid-template-rows: 0.5fr 0.5fr 1fr;
-      gap: 0px 0px;
-      grid-template-areas:
-        "flechehautadecio"
-        "flechecentreadecio"
-        ".";
-      grid-area: flecheadecio;
-    }
-
     .flechehautadecio { grid-area: flechehautadecio; }
+    .flechebasadecio { grid-area: flechebasadecio; }
+    .droitehautadecio { grid-area: droitehautadecio; }
+    .droitebasadecio { grid-area: droitebasadecio; margin-bottom : 5rem;}
 
-    .flechecentreadecio { grid-area: flechecentreadecio; }
+    /* grille n°2*/
+    .grid-container-adecio2 {
+        padding-top: 5rem !important;
+        display: grid;
+        grid-template-columns: 12% 23% 23% 17% 13% 12%;
+        grid-template-rows: 1.7fr auto;
+        gap: 0px 0px;
+        grid-template-areas:
+            ". gaucheadecio2 gaucheadecio2 centreadecio2 droiteadecio2 ."
+            ". gaucheadecio2 gaucheadecio2 centreabasdecio2 centreabasdecio2 .";
+    }
+    .gaucheadecio2 { grid-area: gaucheadecio2; margin-right : 3rem; margin-bottom: 2rem; }
+    .centreadecio2 { grid-area: centreadecio2; text-align:center; margin-right : 2rem; }
+    .droiteadecio2 { grid-area: droiteadecio2; text-align:center;}
+    .centreabasdecio2 { grid-area: centreabasdecio2; margin: 0 4rem 0 4rem;}
+    
+    /*grille adecio 3  grid.layoutit.com?id=YHl0wYd*/
+    .grid-container-adecio3 {
+        display: grid;
+        grid-template-columns: 12% 24% 23% 29% 12%;
+        grid-template-rows: 0.3fr 1.7fr;
+        gap: 0px 0px;
+        grid-template-areas:
+            ". titreadecio3 titreadecio3 titreadecio3 ."
+            ". gaucheadecio3 centreadecio3 droiteadecio3 .";
+    }
+    .gaucheadecio3 { grid-area: gaucheadecio3; }
+    .centreadecio3 { grid-area: centreadecio3; }
+    .droiteadecio3 { grid-area: droiteadecio3; }
+    .titreadecio3 { grid-area: titreadecio3; }
 
 
     @media (max-width: 800px) {
+        /* grille n°2*/
+        .grid-container-adecio2 {
+            padding-top: 5rem !important;
+            display: grid;
+            grid-template-columns: 4% 1fr 4%;
+            grid-template-rows:  auto;
+            gap: 0px 0px;
+            grid-template-areas:
+                ". gaucheadecio2 ."
+                ". centreadecio2 ."
+                ". droiteadecio2 ."
+                ". centreabasdecio2 .";
+        }
+        .gaucheadecio2 { grid-area: gaucheadecio2; margin-right : 0rem; margin-bottom: 2rem; }
+        .centreadecio2 { grid-area: centreadecio2; text-align:center; margin-right : 0rem; margin-bottom: 2rem; }
+        .droiteadecio2 { grid-area: droiteadecio2; text-align:center; margin-bottom: 2rem;}
+        .centreabasdecio2 { grid-area: centreabasdecio2; margin: 0 1rem 0 1rem;}
+
+        .grid-container-adecio-haut { /*! grid.layoutit.com?id=i9nXGcq*/
+            display: grid;
+            grid-template-columns: 4% 1fr 4%;
+            grid-template-rows: auto;
+            gap: 0px 0px;
+            grid-template-areas:
+                ". gauchehautadecio ."
+                ". gauchebasadecio . "
+                ". centrehautadecio ."
+                ". droitehautadecio ."
+                ". centrebasadecio ."
+                ". droitebasadecio .";
+        }
+
+        .gauchehautadecio { grid-area: gauchehautadecio; margin-right : 0rem; text-align: center; }
+        .gauchebasadecio { grid-area: gauchebasadecio;margin-right : 0rem; margin-bottom : 2rem; }
+        .centrehautadecio { grid-area: centrehautadecio;margin-bottom : 2rem; }
+        .centrebasadecio { grid-area: centrebasadecio; margin-bottom : 2rem;}
+        .flechehautadecio { display:none; }
+        .flechebasadecio { display:none; }
+        .droitehautadecio { grid-area: droitehautadecio; margin-bottom : 2rem;}
+        .droitebasadecio { grid-area: droitebasadecio; margin-bottom : 2rem;}
+        .meContacter, .centrehaut{display:none;}
+
         .grid-container {
             text-align: center;
             grid-template-areas:
