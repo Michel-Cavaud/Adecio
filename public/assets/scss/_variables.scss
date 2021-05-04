@@ -92,6 +92,7 @@ $theme-colors: (
   "txmenu":     #030303,
   "traitmenu":  #338f99,
   "txtitre":    #00737f,
+  "txtitre2":   #d64c6b,
   "txcorps":    #464646,
   "txbas":      #cce2e5,
   "bgcentre":   #eaeaea,
@@ -466,7 +467,7 @@ $line-height-base:            1.5 !default;
 $line-height-sm:              1.25 !default;
 $line-height-lg:              2 !default;
 
-$h1-font-size:                $font-size-base * 2.5 !default;
+$h1-font-size:                $font-size-base * 1.75 !default;
 $h2-font-size:                $font-size-base * 2 !default;
 $h3-font-size:                $font-size-base * 1.75 !default;
 $h4-font-size:                $font-size-base * 1.5 !default;

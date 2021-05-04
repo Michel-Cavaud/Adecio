@@ -12,7 +12,7 @@
     <div class="container mb-5">
         <div class="row text-center justify-content-center">
             <div class ="col-md-12 col-lg-8 ">
-                <h3 class="text-txtitre dosisSB text-uppercase texteditor" id="tx_0">{{ articles[0].articles | raw }}</h3>
+                <h1 class="text-txtitre dosisSB text-uppercase texteditor" id="tx_0">{{ articles[0].articles | raw }}</h1>
                 <h5 class="text-txcorps krub espacement texteditor"  id="tx_1">{{ articles[1].articles | raw}}
                 </h5>
             </div>
@@ -105,10 +105,7 @@
 
             </div>
             <div class="droiteFormation">
-                <div class="container text-right">
-                    <img class="img-fluid imageeditor mb-5"  data-image="{{ images[3].nom}}.{{ images[3].ext}}"
-                         id="img_3" alt="" src="{{base_url('assets/images/upload')}}/{{ images[3].nom}}.{{ images[3].ext}}"/>
-                </div>
+               
                 <h5 class="text-txtitre dosisSB text-uppercase texteditor"  id="tx_42">{{ articles[42].articles | raw }}</h5>
                 <div class="krub texteditor mb-2" id="tx_43">{{ articles[43].articles | raw }}</div> 
 
@@ -140,6 +137,11 @@
 
                 <h5 class="text-txtitre dosisSB text-uppercase texteditor"  id="tx_60">{{ articles[60].articles | raw }}</h5>
                 <div class="krub texteditor mb-2" id="tx_61">{{ articles[61].articles | raw }}</div> 
+                
+                 <div class="container text-right">
+                    <img class="img-fluid imageeditor mb-5"  data-image="{{ images[3].nom}}.{{ images[3].ext}}"
+                         id="img_3" alt="" src="{{base_url('assets/images/upload')}}/{{ images[3].nom}}.{{ images[3].ext}}"/>
+                </div>
 
             </div>
             <div class="centreBasFormation">

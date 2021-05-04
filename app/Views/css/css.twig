@@ -9,6 +9,10 @@
         Created on : 16 févr. 2021, 16:51:19
         Author     : michel
     */
+    
+    .texteditor ul li {
+        list-style-position: inside;
+    }
 
     .bi-trash-fill:hover{
         color : red;
@@ -205,6 +209,16 @@
         background-image: linear-gradient(0deg, #eaeaea, #ffffff );
         padding-bottom: 7rem;
     }
+    
+     .separation{
+        background-color: transparent;
+        background-image: -webkit-linear-gradient(to top, #ffffff, #e5e5e5 );
+        background-image: -moz-linear-gradient(to top, #ffffff, #e5e5e5 );
+        background-image: -o-linear-gradient(to top, #ffffff, #e5e5e5 );
+        background-image: linear-gradient(0deg, #ffffff, #e5e5e5);
+        height : 1.5rem;
+       
+    }
 
     .fonddegradeinv{
         width: 100%;
@@ -249,6 +263,21 @@
 
     .colorhr{
         border: 1px solid #63c0d2;
+        opacity: 1;
+    }
+    
+    .colorhr2{
+        border: 1px solid #d64c6b;
+        opacity: 1;
+    }
+    
+     .colorhr3{
+        border: 1px solid #65a8b0;
+        opacity: 1;
+    }
+    
+     .colorhr4{
+        border: 1px solid #00737f;
         opacity: 1;
     }
 
@@ -629,31 +658,31 @@
     .grid-container-adecio2 {
         padding-top: 5rem !important;
         display: grid;
-        grid-template-columns: 12% 23% 23% 17% 13% 12%;
+        grid-template-columns: 12% 23.5% 23.5% 16% 13% 12%;
         grid-template-rows: 1.7fr auto;
         gap: 0px 0px;
         grid-template-areas:
             ". gaucheadecio2 gaucheadecio2 centreadecio2 droiteadecio2 ."
             ". gaucheadecio2 gaucheadecio2 centreabasdecio2 centreabasdecio2 .";
     }
-    .gaucheadecio2 { grid-area: gaucheadecio2; margin-right : 3rem; margin-bottom: 2rem; }
-    .centreadecio2 { grid-area: centreadecio2; text-align:center; margin-right : 2rem; }
+    .gaucheadecio2 { grid-area: gaucheadecio2; margin-right : 2rem; margin-bottom: 2rem; }
+    .centreadecio2 { grid-area: centreadecio2; text-align:center; margin: 0 1rem 2rem 1rem;}
     .droiteadecio2 { grid-area: droiteadecio2; text-align:center;}
     .centreabasdecio2 { grid-area: centreabasdecio2; margin: 0 4rem 0 4rem;}
 
     /*grille adecio 3  grid.layoutit.com?id=YHl0wYd*/
     .grid-container-adecio3 {
         display: grid;
-        grid-template-columns: 12% 25% 25% 26% 12%;
+        grid-template-columns: 11% 26% 26% 26% 11%;
         grid-template-rows: auto auto;
         gap: 0px 0px;
         grid-template-areas:
             ". titreadecio3 titreadecio3 titreadecio3 ."
             ". gaucheadecio3 centreadecio3 droiteadecio3 .";
     }
-    .gaucheadecio3 { grid-area: gaucheadecio3;margin-right : 3rem; }
-    .centreadecio3 { grid-area: centreadecio3;margin-right : 3rem; }
-    .droiteadecio3 { grid-area: droiteadecio3; }
+    .gaucheadecio3 { grid-area: gaucheadecio3;margin : 0 2rem 0 2rem; }
+    .centreadecio3 { grid-area: centreadecio3;margin : 0 2rem 0 2rem; }
+    .droiteadecio3 { grid-area: droiteadecio3; margin : 0 2rem 0 2rem;}
     .titreadecio3 { grid-area: titreadecio3; }
 
     .fonddegradeadecio{
@@ -671,7 +700,7 @@
         background-image: -moz-linear-gradient(to top left, #ffffff, #eaeaea );
         background-image: -o-linear-gradient(to top left,#ffffff, #eaeaea );
         background-image: linear-gradient(0deg, #ffffff, #eaeaea );
-        padding: 4rem 0 5rem 0;
+        padding: 4rem 0 3rem 0;
     }
 
     .trianglepInvAdecio{
@@ -718,7 +747,7 @@
     /* grille adecio 4  grid.layoutit.com?id=UUGpbGt */
     .grid-container-adecio4 {
         display: grid;
-        grid-template-columns: 12% 27% 27% 22% 12%;
+        grid-template-columns: 11% 26% 26% 26% 11%;
         grid-template-rows: auto 1fr 1fr;
         gap: 3rem 0px;
         grid-template-areas:
@@ -727,13 +756,13 @@
             ". gauchebasadecio4 centrebasadecio4 broitebasadecio4 .";
     }
 
-    .gaucheadecio4 { grid-area: gaucheadecio4; margin-right : 3rem;}
-    .centreadecio4 { grid-area: centreadecio4; margin-right : 3rem;}
-    .droiteadecio4 { grid-area: droiteadecio4; }
+    .gaucheadecio4 { grid-area: gaucheadecio4; margin : 0 2rem 0 2rem; }
+    .centreadecio4 { grid-area: centreadecio4; margin : 0 2rem 0 2rem; }
+    .droiteadecio4 { grid-area: droiteadecio4; margin : 0 2rem 0 2rem; }
     .titreadecio4 { grid-area: titreadecio4; }
-    .gauchebasadecio4 { grid-area: gauchebasadecio4;  margin-right : 3rem;}
-    .centrebasadecio4 { grid-area: centrebasadecio4;  margin-right : 3rem;}
-    .broitebasadecio4 { grid-area: broitebasadecio4; }
+    .gauchebasadecio4 { grid-area: gauchebasadecio4;  margin : 0 2rem 0 2rem; }
+    .centrebasadecio4 { grid-area: centrebasadecio4; margin : 0 2rem 0 2rem; }
+    .broitebasadecio4 { grid-area: broitebasadecio4; margin : 0 2rem 0 2rem; }
 
 
     @media (max-width: 800px) {
