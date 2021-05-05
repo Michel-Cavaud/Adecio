@@ -14,7 +14,11 @@
 // website requirements and design properly.
 //
 // For more information refer to: https://ckeditor.com/docs/ckeditor4/latest/guide/dev_styles.html#style-rules
-
+ CKEDITOR.stylesSet.add('mystyles', [
+        // Block-level styles
+        {name: 'ligne 1', element: 'hr', attributes: { 'class': 'colorhr' }},
+       
+    ]);
 CKEDITOR.stylesSet.add( 'default', [
 	/* Block styles */
 

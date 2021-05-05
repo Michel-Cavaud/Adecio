@@ -19,16 +19,20 @@ CKEDITOR.editorConfig = function (config) {
         {name: 'styles'},
         {name: 'insert'},
         {name: 'links'},
-        {name: 'colors'}
+        {name: 'colors'},
     ];
-    // The default plugins included in the basic setup define some buttons that
-    // are not needed in a basic editor. They are removed here.
+   
+   
     config.removeButtons = 'Cut,Copy,Paste,Undo,Redo,Anchor,Underline,Strike,Subscript,Superscript';
-    // Dialog windows are also simplified.
+    
     config.removeDialogTabs = 'link:advanced';
     config.colorButton_colors = '000,FFF,00737f,464646,cce2e5,f7dfe4,e83c69,ecebec';
     config.font_names = 'Dosis;Krub';
     config.fontSize_sizes = 'Très petit/0.6rem;Petit/0.8rem;Normal/1rem;Grand/1.25rem;Plus grand/1.5rem;Très grand/1.75rem';
+
+   config.extraPlugins = 'nbsp';
+   
+
 };
 
 CKEDITOR.on('dialogDefinition', function (ev) {
@@ -44,11 +48,11 @@ CKEDITOR.on('dialogDefinition', function (ev) {
 //Get a reference to the 'Link Info' tab.
         var infoTab = dialogDefinition.getContents('info');
 //Remove unnecessary widgets from the 'Link Info' tab.
-       
+
 //Get a reference to the "Target" tab and set default to '_blank'
         var targetTab = dialogDefinition.getContents('target');
         var targetField = targetTab.get('linkTargetType');
         targetField['default'] = '_blank';
-    } 
+    }
 });
 
