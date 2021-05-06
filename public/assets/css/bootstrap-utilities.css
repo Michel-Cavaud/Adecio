@@ -30,6 +30,10 @@
   font-weight: 700 !important;
 }
 
+.Italic {
+  font-style: italic !important;
+}
+
 .clearfix::after {
   display: block;
   clear: both;

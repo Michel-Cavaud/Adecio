@@ -47,7 +47,7 @@ $routes->group('admin', function ($routes){
 });
 
 
-
+$routes->post('email', 'Home::sendEmail');
 
 $routes->get('/(:any)', 'Home::index/$1');
 $routes->get('/(:any)/(:any)', 'Home::index/$1/$2');

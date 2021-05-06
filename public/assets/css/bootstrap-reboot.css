@@ -31,6 +31,10 @@
   font-weight: 700 !important;
 }
 
+.Italic {
+  font-style: italic !important;
+}
+
 *,
 *::before,
 *::after {

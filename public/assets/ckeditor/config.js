@@ -21,17 +21,22 @@ CKEDITOR.editorConfig = function (config) {
         {name: 'links'},
         {name: 'colors'},
     ];
-   
-   
+
+    //config.coreStyles_italic = { element: 'i', overrides: 'em' };
+    CKEDITOR.config.coreStyles_italic = {
+        element: 'span',
+             attributes: { 'class': 'Italic'
+            }
+     };
     config.removeButtons = 'Cut,Copy,Paste,Undo,Redo,Anchor,Underline,Strike,Subscript,Superscript';
-    
+
     config.removeDialogTabs = 'link:advanced';
     config.colorButton_colors = '000,FFF,00737f,464646,cce2e5,f7dfe4,e83c69,ecebec';
-    config.font_names = 'Dosis;Krub';
+    config.font_names = 'Dosis;Krub, sans-serif';
     config.fontSize_sizes = 'Très petit/0.6rem;Petit/0.8rem;Normal/1rem;Grand/1.25rem;Plus grand/1.5rem;Très grand/1.75rem';
 
-   config.extraPlugins = 'nbsp';
-   
+    config.extraPlugins = 'nbsp';
+
 
 };
 
