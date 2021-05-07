@@ -57,3 +57,9 @@ L'admin peut aussi mettre a jour sont mot de passe.
 
 Et se déconnecter.
 ![enter image description here](https://github.com/Michel-Cavaud/Adecio/blob/master/dossierConception/menu%20admin%20d%C3%A9connexion.png)
+
+**Mise en ligne**
+
+La mise en ligne du site c'est fait sur un serveur OVH.
+J'ai du configurer la base de données qui n'avait pas été activée.
+Télécharger les éléments du site et changer les éléments du fichier .env pour corresponde à ce nouvel environnement et cette nouvelle base de données. (le fichier .env n'est pas présent sur GitHub).
