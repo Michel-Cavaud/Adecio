@@ -38,7 +38,7 @@ Cette base de données utilise des vues pour avoir accès aux information des te
 **La modification des textes et des photos sur les page du site.**
 Pour cela j'ai créé un site que j'appellerais **"admin"** il est à l'identique du site grand public mais donne la possibilité de modifier les textes et les images avec un menu supplémentaire. cette partie n'a pas d'accès direct du site grand public mais l'administrateur à un lien spécifique. Une connexion par identifiant et mot de passe lui sera demandée.
 
-Une fois connecté l'administrateur voit le même site avec un menu sur le coté ![enter image description here](https://github.com/Michel-Cavaud/Adecio/blob/master/dossierConception/menu%20admin.png) et la possibilité par un click sur un paragraphe d'avoir l'ouverture d'une modale avec le texte du site et les éléments pour modifier le texte (avec CKEditor.
+Une fois connecté l'administrateur voit le même site avec un menu sur le coté ![enter image description here](https://github.com/Michel-Cavaud/Adecio/blob/master/dossierConception/menu%20admin.png) et la possibilité par un click sur un paragraphe d'avoir l'ouverture d'une modale avec le texte du site et les éléments pour modifier le texte (avec CKEditor).
 
 ![enter image description here](https://github.com/Michel-Cavaud/Adecio/blob/master/dossierConception/modification%20texte.png)
 
@@ -48,9 +48,12 @@ Idem pour les images.
 Dans CK Editor j'ai intégré les éléments graphiques du site (couleur, polices, taille des caractères)
 L'admin peut demander la mise en place de cadre pour chaque paragraphes et images lui permettant d'avoir accès au éléments vides.
 ![enter image description here](https://github.com/Michel-Cavaud/Adecio/blob/master/dossierConception/cadre%20admin.png)
+
 Une fois les éléments de la page en place l'admin doit enregistrer sa page pour changer les éléments de la page grand public.
 ![enter image description here](https://github.com/Michel-Cavaud/Adecio/blob/master/dossierConception/eng%20page.png)
+
 L'admin peut aussi mettre a jour sont mot de passe.
 ![enter image description here](https://github.com/Michel-Cavaud/Adecio/blob/master/dossierConception/maj%20mdp.png)
+
 Et se déconnecter.
 ![enter image description here](https://github.com/Michel-Cavaud/Adecio/blob/master/dossierConception/menu%20admin%20d%C3%A9connexion.png)
