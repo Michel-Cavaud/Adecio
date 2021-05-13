@@ -20,7 +20,7 @@ class Home extends BaseController {
             header("location:" . base_url('admin'));
         } else {
 
-            $arrayPages = array('coachingentreprise', 'coachingparticuliers', 'formations', 'adecio', 'contact');
+            $arrayPages = array('coachingentreprise', 'coachingparticuliers', 'formations', 'apropos', 'contact');
             $arraySousPage = array('coachingindividuel', 'coachingequipes', 'coachingorganisations',
                 'gestiondutemps', 'gestiondesconflits', 'managementniveau1', 'managementniveau2', 'managementadistance', 'formation6');
 
@@ -35,7 +35,7 @@ class Home extends BaseController {
                 $this->data['images'] = $imagesPages->findImagesPage($page);
                 if ($page == 'contact') {
                     $this->twig->display('admin/contact.html', $this->data);
-                } else if ($page == 'adecio') {
+                } else if ($page == 'apropos') {
                     $this->twig->display('admin/adecio.html', $this->data);
                 } else {
                     $this->twig->display('admin/type.html', $this->data);

@@ -575,9 +575,9 @@
 
     .grid-containerTypeBas {
         display: grid;
-        grid-template-columns: 12% 24% 26% 26% 12%;;
+        grid-template-columns: 9% 25% 25% 26% 9%;;
         grid-template-rows: 1fr;
-        gap: 0px 0px;
+        gap: 0px 30px;
         grid-template-areas:
             ". typeGaucheBas typeCentreBas typeDroiteBas .";
     }
@@ -585,16 +585,16 @@
         grid-area: typeGaucheBas;
         margin-right: 5rem;
     }
-    .typeCentreBas { grid-area: typeCentreBas;margin-right: 2.5rem; }
+    .typeCentreBas { grid-area: typeCentreBas;margin-right: 0rem; }
     .typeDroiteBas { grid-area: typeDroiteBas;  position: relative; padding-bottom: 12rem;}
 
     .typeCentreBas ul li:before{ content:"- ";}
 
     .grid-containerFooterHaut {
         display: grid;
-        grid-template-columns: 12% 24% 26% 26% 12%;
+        grid-template-columns: 9% 25% 25% 26% 9%;
         grid-template-rows: 1fr;
-        gap: 0px 0px;
+        gap: 0px 30px;
         grid-template-areas:
             ". typeGaucheFooterHaut typeCentreFooterHaut typeDroiteFooterHaut .";
     }
@@ -612,17 +612,17 @@
     /*formation*/
     .grid-containerFormation {
         display: grid;
-        grid-template-columns: 1fr 3fr  3fr 3fr 1fr;
+        grid-template-columns: 9% 25% 25% 25% 9%;
         grid-template-rows: 1fr 0.1fr;
-        gap: 0px 0px;
+        gap: 0px 30px;
         grid-template-areas:
             ". gaucheFormation centreFormation droiteFormation ."
             ". . centreBasFormation . .";
     }
-    .gaucheFormation { grid-area: gaucheFormation; margin-right : 2rem; }
-    .centreFormation { grid-area: centreFormation;  margin-right : 2rem;}
+    .gaucheFormation { grid-area: gaucheFormation; margin-right : 0rem; }
+    .centreFormation { grid-area: centreFormation;  margin-right : 0rem;}
     .droiteFormation { grid-area: droiteFormation; }
-    .centreBasFormation {grid-area: centreBasFormation; margin : 5rem 4.5rem 0 3rem;}
+    .centreBasFormation {grid-area: centreBasFormation; margin : 5rem 0rem 0 3rem;}
 
     /*Contact*/
     .grid-containerContact {
@@ -641,51 +641,51 @@
     /*grille adecio haut  */
     .grid-container-adecio-haut { /*! grid.layoutit.com?id=i9nXGcq*/
         display: grid;
-        grid-template-columns: 12% 24% 17% 6% 29% 12%;
+        grid-template-columns: 12% 23% 23% 7% 23% 12%;
         grid-template-rows: auto 1fr;
         gap: 0px 0px;
         grid-template-areas:
             ". gauchehautadecio centrehautadecio flechehautadecio droitehautadecio ."
             ". gauchebasadecio centrebasadecio flechebasadecio droitebasadecio .";
     }
-    .gauchehautadecio { grid-area: gauchehautadecio; margin-right : 3rem; }
-    .gauchebasadecio { grid-area: gauchebasadecio;margin-right : 3rem; }
+    .gauchehautadecio { grid-area: gauchehautadecio; margin-right : 0rem; }
+    .gauchebasadecio { grid-area: gauchebasadecio;margin-right : 0rem; }
     .centrehautadecio { grid-area: centrehautadecio; }
     .centrebasadecio { grid-area: centrebasadecio; }
     .flechehautadecio { grid-area: flechehautadecio; }
     .flechebasadecio { grid-area: flechebasadecio; }
-    .droitehautadecio { grid-area: droitehautadecio; margin-left:1rem; }
-    .droitebasadecio { grid-area: droitebasadecio;  margin-left:1rem; margin-bottom : 5rem;}
+    .droitehautadecio { grid-area: droitehautadecio; margin-left:0rem; }
+    .droitebasadecio { grid-area: droitebasadecio;  margin-left:0rem; margin-bottom : 5rem;}
 
     /* grille n°2*/
     .grid-container-adecio2 {
         padding-top: 5rem !important;
         display: grid;
-        grid-template-columns: 12% 23.5% 23.5% 16% 13% 12%;
+        grid-template-columns: 9% 25% 25% 13% 13% 8%;
         grid-template-rows: 1.7fr auto;
-        gap: 0px 0px;
+        gap: 0px 30px;
         grid-template-areas:
             ". gaucheadecio2 gaucheadecio2 centreadecio2 droiteadecio2 ."
             ". gaucheadecio2 gaucheadecio2 centreabasdecio2 centreabasdecio2 .";
     }
-    .gaucheadecio2 { grid-area: gaucheadecio2; margin-right : 2rem; margin-bottom: 2rem; }
-    .centreadecio2 { grid-area: centreadecio2; text-align:center; margin: 0 1rem 2rem 1rem;}
+    .gaucheadecio2 { grid-area: gaucheadecio2; margin-right : 0rem; margin-bottom: 2rem; }
+    .centreadecio2 { grid-area: centreadecio2; text-align:center; margin: 0 0rem 2rem 0rem;}
     .droiteadecio2 { grid-area: droiteadecio2; text-align:center;}
     .centreabasdecio2 { grid-area: centreabasdecio2; margin: 0 4rem 0 4rem;}
 
     /*grille adecio 3  grid.layoutit.com?id=YHl0wYd*/
     .grid-container-adecio3 {
         display: grid;
-        grid-template-columns: 12% 24% 26% 26% 12%;
+        grid-template-columns: 9% 25% 25% 25% 9%;
         grid-template-rows: auto auto;
-        gap: 0px 0px;
+        gap: 0px 30px;
         grid-template-areas:
             ". titreadecio3 titreadecio3 titreadecio3 ."
             ". gaucheadecio3 centreadecio3 droiteadecio3 .";
     }
-    .gaucheadecio3 { grid-area: gaucheadecio3;margin : 0 3rem 0 0; }
-    .centreadecio3 { grid-area: centreadecio3;margin : 0 3rem 0 0; }
-    .droiteadecio3 { grid-area: droiteadecio3; margin : 0 3rem 0 0;}
+    .gaucheadecio3 { grid-area: gaucheadecio3;margin : 0 0rem 0 0; }
+    .centreadecio3 { grid-area: centreadecio3;margin : 0 0rem 0 0; }
+    .droiteadecio3 { grid-area: droiteadecio3; margin : 0 0rem 0 0;}
     .titreadecio3 { grid-area: titreadecio3; }
 
     .fonddegradeadecio{
@@ -750,22 +750,22 @@
     /* grille adecio 4  grid.layoutit.com?id=UUGpbGt */
     .grid-container-adecio4 {
         display: grid;
-        grid-template-columns: 12% 24% 26% 26% 12%;
+        grid-template-columns: 9% 25% 25% 25% 9%;
         grid-template-rows: auto 1fr 1fr;
-        gap: 3rem 0px;
+        gap: 3rem 30px;
         grid-template-areas:
             ". titreadecio4 titreadecio4 titreadecio4 ."
             ". gaucheadecio4 centreadecio4 droiteadecio4 ."
             ". gauchebasadecio4 centrebasadecio4 broitebasadecio4 .";
     }
 
-    .gaucheadecio4 { grid-area: gaucheadecio4; margin : 0 3rem 0 0; }
-    .centreadecio4 { grid-area: centreadecio4; margin : 0 3rem 0 0; }
-    .droiteadecio4 { grid-area: droiteadecio4; margin : 0 3rem 0 0; }
+    .gaucheadecio4 { grid-area: gaucheadecio4; margin : 0 0rem 0 0; }
+    .centreadecio4 { grid-area: centreadecio4; margin : 0 0rem 0 0; }
+    .droiteadecio4 { grid-area: droiteadecio4; margin : 0 0rem 0 0; }
     .titreadecio4 { grid-area: titreadecio4; }
-    .gauchebasadecio4 { grid-area: gauchebasadecio4;  margin : 0 3rem 0 0; }
-    .centrebasadecio4 { grid-area: centrebasadecio4; margin : 0 3rem 0 0; }
-    .broitebasadecio4 { grid-area: broitebasadecio4; margin : 0 3rem 0 0; }
+    .gauchebasadecio4 { grid-area: gauchebasadecio4;  margin : 0 0rem 0 0; }
+    .centrebasadecio4 { grid-area: centrebasadecio4; margin : 0 0rem 0 0; }
+    .broitebasadecio4 { grid-area: broitebasadecio4; margin : 0 0rem 0 0; }
 
     /*mentions légales grid.layoutit.com?id=f0UNf9g */
     .grid-container-mentions-legales {

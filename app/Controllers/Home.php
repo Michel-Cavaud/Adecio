@@ -11,7 +11,7 @@ class Home extends BaseController {
 
     public function index($page = '', $souspage = '') {
 
-        $arrayPages = array('coachingentreprise', 'coachingparticuliers', 'formations', 'adecio', 'contact', 'mentionslegales');
+        $arrayPages = array('coachingentreprise', 'coachingparticuliers', 'formations', 'apropos', 'contact', 'mentionslegales');
         $arraySousPage = array('coachingindividuel', 'coachingequipes', 'coachingorganisations',
             'gestiondutemps', 'gestiondesconflits', 'managementniveau1', 'managementniveau2', 'managementadistance', 'formation6');
 
@@ -25,7 +25,7 @@ class Home extends BaseController {
             $this->data['images'] = $imagesPages->findImagesPage($page);
             if ($page == 'contact') {
                 $this->twig->display('contact.html', $this->data);
-            } else if ($page == 'adecio') {
+            } else if ($page == 'apropos') {
                 $this->twig->display('adecio.html', $this->data);
             } else if ($page == 'mentionslegales') {
                 $this->twig->display('mentionslegales.html', $this->data);
