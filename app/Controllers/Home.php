@@ -10,6 +10,8 @@ class Home extends BaseController {
     protected $data;
 
     public function index($page = '', $souspage = '') {
+        
+        $this->cachePage(30);
 
         $arrayPages = array('coachingentreprise', 'coachingparticuliers', 'formations', 'apropos', 'contact', 'mentionslegales');
         $arraySousPage = array('coachingindividuel', 'coachingequipes', 'coachingorganisations',
