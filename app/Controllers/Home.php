@@ -24,6 +24,7 @@ class Home extends BaseController {
 
         if (in_array($page, $arrayPages) & $souspage == '') {
             $this->data['articles'] = $articlesPages->findArticlesPage($page);
+            
             $this->data['images'] = $imagesPages->findImagesPage($page);
             if ($page == 'contact') {
                 $this->twig->display('contact.html', $this->data);
@@ -31,6 +32,8 @@ class Home extends BaseController {
                 $this->twig->display('adecio.html', $this->data);
             } else if ($page == 'mentionslegales') {
                 $this->twig->display('mentionslegales.html', $this->data);
+            }else if ($page == 'formations') {
+                $this->twig->display('formations.html', $this->data);
             } else {
                 $this->twig->display('type.html', $this->data);
             }

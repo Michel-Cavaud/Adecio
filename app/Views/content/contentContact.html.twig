@@ -21,11 +21,11 @@
     <div class="container-fluid pt-2 ml-0 mr-0 pb-0 fonddegrade">
         <div class="grid-containerContact pb-5">
             <div class="gaucheContact">
-                <p class="texteditor"  id="tx_2">{{ articles[2].articles | raw }}</p>
+                <div class="texteditor mb-3"  id="tx_2">{{ articles[2].articles | raw }}</div>
 
-                <p class="texteditor" id="tx_3">{{ articles[3].articles | raw }}</p>
+                <div class="texteditor mb-3" id="tx_3">{{ articles[3].articles | raw }}</div>
 
-                <p class="texteditor" id="tx_4">{{ articles[4].articles | raw }}<p>
+                <div class="texteditor" id="tx_4">{{ articles[4].articles | raw }}</div>
             </div>
             <div class="centreContact pb-5">
                 {{ form_open('', 'id="formContact"') }}
@@ -56,7 +56,7 @@
                     </div>
                 </div>
                 <div class="d-flex justify-content-end">
-                    <button type="submit" id="form-submit" class="btn btn-success btn-lg ">Envoyer</button> 
+                    <button type="submit" id="form-submit" class="btn btn-bgasdroite btn-lg dosis text-txbas ">ENVOYER</button> 
                 </div>
                 {{ form_close() }}
                 <div id="msgSubmit" class="text-center krubBold invisible">Message envoyé</div>

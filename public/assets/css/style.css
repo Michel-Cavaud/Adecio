@@ -153,7 +153,7 @@ button.close {
 }
 
 
-.A3:hover .gauche, .M1:hover, .meContacter:hover{
+.A3:hover .gauche, .B3:hover .gauche, .M1:hover, .meContacter:hover{
     background-color: #338f98 !important;
 }
 

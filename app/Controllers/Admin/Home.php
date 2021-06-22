@@ -15,6 +15,8 @@ class Home extends BaseController {
     }
 
     public function index($page = '', $souspage = '') {
+        
+        $this->cachePage(1);
 
         if (!isset($this->session->connecte) && !$this->session->connecte) {
             header("location:" . base_url('admin'));
@@ -37,7 +39,9 @@ class Home extends BaseController {
                     $this->twig->display('admin/contact.html', $this->data);
                 } else if ($page == 'apropos') {
                     $this->twig->display('admin/adecio.html', $this->data);
-                } else {
+                }else if ($page == 'formations') {
+                    $this->twig->display('/admin/formations.html', $this->data);
+                }else {
                     $this->twig->display('admin/type.html', $this->data);
                 }
             } elseif (in_array($page, $arrayPages) & in_array($souspage, $arraySousPage)) {

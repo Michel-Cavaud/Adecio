@@ -11,7 +11,8 @@
     */
 
     .texteditor ul li {
-        list-style-position: inside;
+         list-style-position: outside;
+        margin-left : 1rem;
     }
     .texteditor a:link{
         text-decoration: none;
@@ -140,6 +141,10 @@
         margin-top: 5.5rem;
         margin-bottom: 5.5rem;
     }
+    #accompagnerFormations{
+        margin-top: 5.5rem;
+      
+    }
     #accompagnerType{
         margin-top: 5.5rem;
     }
@@ -172,7 +177,7 @@
     }
 
 
-    .A3:hover .gauche, .M1:hover, .meContacter:hover{
+    .A3:hover .gauche, .B3:hover .gauche, .C3:hover .gauche, .A3Formations:hover .gauche, .B3Formations:hover .gauche, .C3Formations:hover .gauche, .M1:hover, .meContacter:hover{
         background-color: #338f98 !important;
     }
 
@@ -420,6 +425,32 @@
         border-left : 15px solid transparent;
     }
 
+    .grid-containerFormations {
+        display: grid;
+        /*grid-template-columns: 0.5fr 1fr 1fr 1fr 0.5fr;*/
+        grid-template-columns: 10% 23% 5% 23% 5% 23% 10%;
+
+        grid-template-rows: 60px auto 1fr;
+
+        grid-template-areas:
+            ". A1Formations . B1Formations . C1Formations ."
+            ". A2Formations . B2Formations . C2Formations ."
+            ". A3Formations . B3Formations . C3Formations .";
+    }
+    .A1Formations { grid-area: A1Formations;margin: 0 1rem 0 1rem}
+    .A2Formations { grid-area: A2Formations; padding:  4rem 0.5rem 1rem 0.5rem;}
+    .A3Formations { grid-area: A3Formations;}
+    .B1Formations { grid-area: B1Formations;margin: 0 1rem 0 1rem}
+    .B2Formations { grid-area: B2Formations;padding:  4rem 1rem 1rem 1rem;}
+    .B3Formations { grid-area: B3Formations;}
+    .C1Formations { grid-area: C1Formations; margin: 0 1rem 0 1rem}
+    .C2Formations { grid-area: C2Formations;padding:  4rem 1rem 1rem 1rem;}
+    .C3Formations { grid-area: C3Formations;}
+    
+    .A3Formations .texteditor a, .B3Formations .texteditor a, .C3Formations .texteditor a{
+            color: #cce2e5 !important;
+    }
+    
     .grid-container {
         display: grid;
         /*grid-template-columns: 0.5fr 1fr 1fr 1fr 0.5fr;*/
@@ -649,7 +680,7 @@
             ". gauchebasadecio centrebasadecio flechebasadecio droitebasadecio .";
     }
     .gauchehautadecio { grid-area: gauchehautadecio; margin-right : 0rem; }
-    .gauchebasadecio { grid-area: gauchebasadecio;margin-right : 0rem; }
+    .gauchebasadecio { grid-area: gauchebasadecio;margin-right : 3rem; } 
     .centrehautadecio { grid-area: centrehautadecio; }
     .centrebasadecio { grid-area: centrebasadecio; }
     .flechehautadecio { grid-area: flechehautadecio; }

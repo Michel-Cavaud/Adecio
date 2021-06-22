@@ -1,0 +1,302 @@
+
+
+<script>
+    $(document).ready(function () {
+
+
+
+
+        var idtx = '';
+        var idimg = '';
+        //frm.document.designMode = "on";
+        myinstance = CKEDITOR.replace('textModal', {
+            language: 'fr',
+            uiColor: '#99C7CB',
+            enterMode: 2
+        });
+
+        $(".imageeditor").on('click', (function (e) {
+            idimg = $(this).attr('id');
+            console.log(idimg);
+            if (idimg != '' & idimg.substr(0, 4) == 'img_') {
+                $('#idimage').val(idimg.substr(4, 7));
+                $('#nomextimage').val($(this).data('image'));
+                console.log($(this).data('image'));
+                if ($(this).data('image') == '.' | $(this).data('image') == '') {
+                    $("#supimage").hide();
+                } else {
+                    $("#supimage").show();
+                }
+                $('#modalimage').modal('show');
+            }
+        }));
+
+        $("#formImage").on('submit', (function (e) {
+            e.preventDefault();
+            var formData = new FormData($(this)[0]);
+            $.ajax({
+                url: "{{ base_url('admin/ajax/uploadImage') }}",
+                type: "POST",
+                headers: {'X-Requested-With': 'XMLHttpRequest'},
+                data: formData,
+                contentType: false,
+                cache: false,
+                processData: false,
+                dataType: "json",
+                success: function (reponse) {
+                    changeJeton(reponse.csrf_adecio);
+                    $('#modalimage').modal('hide');
+                    $('#' + idimg).attr('src', '{{base_url('assets/images/upload')}}' + '/' + reponse.nomImage);
+                    $('#' + idimg).data('image', reponse.nomImage);
+                },
+                error: function (reponse, ajaxOptions, thrownError) {
+
+                }
+            });
+        }));
+
+        $(".texteditor").on('click', (function (e) {
+            idtx = $(this).attr('id');
+            if (idtx != '' & idtx.substr(0, 3) == 'tx_') {
+                $('#textModal').val('');
+                //myinstance = CKEDITOR.instances.textModal;
+                myinstance.setData($("#" + idtx).html());
+                $('#idtext').val(idtx.substr(3, 6));
+                $('#modal').modal('show');
+            }
+        }));
+
+
+        $("#formText").on('submit', (function (e) {
+            e.preventDefault();
+            //$("#textModal").val($("#frm").contents().find('body').html())
+            myinstance.updateElement();
+            $.ajax({
+                url: "{{ base_url('admin/ajax/changetext') }}",
+                type: "POST",
+                headers: {'X-Requested-With': 'XMLHttpRequest'},
+                data: $(this).serialize(),
+                dataType: "json",
+                success: function (reponse) {
+                    changeJeton(reponse.csrf_adecio);
+                    $("#" + idtx).html($("#textModal").val());
+                    $('#modal').modal('hide');
+                    idtx = '';
+                },
+                error: function (reponse, ajaxOptions, thrownError) {
+                    idtx = '';
+                }
+            });
+
+        }));
+
+        $('#modal').on('shown.bs.modal', function () {
+            $(document).off('focusin.modal');
+        });
+
+        $("#btnenregistrer").on('click', (function (e) {
+            e.preventDefault();
+            $('#modalmessage').modal('show');
+        }));
+        $("#btncadre").on('click', (function (e) {
+            e.preventDefault();
+            $('.texteditor').each(function () {
+                $(this).toggleClass('borduretexte');
+            });
+            $('.imageeditor').each(function () {
+                $(this).toggleClass('bordureimage');
+            });
+        }));
+        $("#btndeconnexion").on('click', (function (e) {
+            e.preventDefault();
+            var formData = new FormData();
+            const csrfvalue = $('#formenregistrertext input[name="csrf_adecio"]').val();
+            const csrfname = "csrf_adecio";
+            formData.append(csrfname, csrfvalue);
+
+            $.ajax({
+                url: "{{ base_url('admin/ajax/deconnexion') }}",
+                type: "POST",
+                headers: {'X-Requested-With': 'XMLHttpRequest'},
+                data: formData,
+                enctype: 'multipart/form-data',
+                processData: false,
+                contentType: false,
+                dataType: "json",
+                success: function (reponse) {
+                    $(location).attr('href', '{{ base_url('admin')}}');
+                }
+            });
+        }));
+        $("#btnmdp").on('click', (function (e) {
+            e.preventDefault();
+            $('#majMdpModal').modal('show');
+        }));
+
+        $(".bi-trash-fill").on('click', (function (e) {
+            e.preventDefault();
+            $("#nomimage").val($("#nomextimage").val());
+            $("#positionimage").val(idimg.substr(4, 7));
+            $('#modalmessageimage').modal('show');
+        }));
+        $("#formsupimage").on('submit', (function (e) {
+            e.preventDefault();
+            console.log($(this).serialize());
+            $.ajax({
+                url: "{{ base_url('admin/ajax/supimage') }}",
+                type: "POST",
+                headers: {'X-Requested-With': 'XMLHttpRequest'},
+                data: $(this).serialize(),
+                dataType: "json",
+                success: function (reponse) {
+                    changeJeton(reponse.csrf_adecio);
+                    $('#modalmessageimage').modal('hide');
+                    $('#modalimage').modal('hide');
+                    $('#' + idimg).attr('src', '');
+                    $('#' + idimg).data('image', '');
+                    idtx = '';
+                },
+                error: function (reponse, ajaxOptions, thrownError) {
+                    changeJeton(reponse.csrf_adecio);
+                    idtx = '';
+                }
+            });
+
+        }));
+
+        $("#formenregistrertext").on('submit', (function (e) {
+            e.preventDefault();
+            $('.spinner-border').toggleClass('visually-hidden');
+            $.ajax({
+                url: "{{ base_url('admin/ajax/enregistrertext') }}",
+                type: "POST",
+                headers: {'X-Requested-With': 'XMLHttpRequest'},
+                data: $(this).serialize(),
+                dataType: "json",
+                success: function (reponse) {
+                    changeJeton(reponse.csrf_adecio);
+                    if (reponse.erreur) {
+                        $('.erreurmessage').toggleClass('visually-hidden');
+                        $('.erreurmessage').text("Erreur sur la sauvegarde merci de contacter l'administrateur");
+                    } else {
+                        $('.spinner-border').toggleClass('visually-hidden');
+                        $('#modalmessage').modal('hide');
+                    }
+                }
+            });
+        }));
+
+        function changeJeton(jeton) {
+            $('input[name="csrf_adecio"]').each(function () {
+                $(this).attr("value", jeton);
+            });
+        }
+
+        var regex = new Array();
+        regex.push("[a-z]");
+        regex.push("[A-Z]");
+        regex.push("[0-9]");
+        regex.push("[$@$!%*#?&]");
+
+        var passed = 0;
+
+        var listGroup = document.querySelectorAll(".listMdp");
+        var progressBar = document.querySelector(".progress-bar");
+
+        for (let i = 0; i < listGroup.length; i++) {
+            listGroup[i].classList.add("list-groupNoValid");
+        }
+
+        $('#mdpNouveau1').on('keyup', function (e) {
+            var passed = 0;
+            if ($('#mdpNouveau1').val().length > 7) {
+                listGroup[4].classList.remove("text-danger");
+                listGroup[4].classList.add("text-success");
+                passed++;
+            } else {
+                listGroup[4].classList.remove("text-success");
+                listGroup[4].classList.add("text-danger");
+                passed--;
+
+            }
+
+            for (var i = 0; i < regex.length; i++) {
+                if (new RegExp(regex[i]).test($('#mdpNouveau1').val())) {
+                    listGroup[i].classList.remove("text-danger");
+                    listGroup[i].classList.add("text-success");
+                    passed++;
+                } else {
+                    listGroup[i].classList.remove("text-success");
+                    listGroup[i].classList.add("text-danger");
+                    passed--;
+                }
+            }
+            switch (passed) {
+                case - 3:
+                case - 2:
+                    progressBar.style.width = "5%";
+                    progressBar.style.backgroundColor = "red";
+                    break;
+                case - 1:
+                case 0:
+                    progressBar.style.width = "30%";
+                    progressBar.style.backgroundColor = "red";
+                    break;
+                case 1:
+                case 2:
+                case 3:
+                    progressBar.style.width = "60%";
+                    progressBar.style.backgroundColor = "orange";
+                    break;
+                case 4:
+                    progressBar.style.width = "70%";
+                    progressBar.style.backgroundColor = "orange";
+                    break;
+                case 5:
+                    progressBar.style.width = "100%";
+                    progressBar.style.backgroundColor = "green";
+                    break;
+            }
+        });
+
+        $("#majMDP").on('submit', (function (e) {
+            e.preventDefault();
+            const csrf = $('#majMDP input[name="csrf_infoGestion"]').val();
+            
+            $.ajax({
+                url: "{{ base_url('admin/ajax/majmdp') }}",
+                type: "POST",
+                headers: {'X-Requested-With': 'XMLHttpRequest'},
+                data: $(this).serialize(),
+                dataType: "json",
+                success: function (reponse) {
+                    changeJeton(reponse.csrf_adecio);
+                    var erreur = (typeof (reponse.erreur) != 'undefined' && reponse.erreur != null) ? reponse.erreur : null;
+                    $("#majMDP input[type='text']").each(function () {
+                        $(this).removeClass('is-invalid');
+                    });
+                    if (erreur) {
+                        $.each(reponse.liste, function (key, value) {
+                            $("#" + key).addClass('is-invalid');
+                        });
+                        $("#messageMdp").text(reponse.message);
+                        $("#mdpInfo").removeClass('alert-primary');
+                        $("#mdpInfo").addClass('alert-danger show');
+                    } else {
+                        $("#mdpInfo").removeClass('alert-danger');
+                        $("#mdpInfo").addClass('alert-primary show');
+                        $("#messageMdp").text(reponse.message);
+                        $("#majMDP input[type='password']").each(function () {
+                            $(this).val(null);
+                        });
+
+                        $(location).attr('href', '{{ base_url('admin') }}');
+
+                    }
+                }
+            });
+        }));
+
+
+    });
+</script>
