@@ -177,7 +177,9 @@
     }
 
 
-    .A3:hover .gauche, .B3:hover .gauche, .C3:hover .gauche, .A3Formations:hover .gauche, .B3Formations:hover .gauche, .C3Formations:hover .gauche, .M1:hover, .meContacter:hover{
+    .A3:hover .gauche, .B3:hover .gauche, .C3:hover .gauche, .A3Formations:hover .gauche,
+    .B3Formations:hover .gauche, .C3Formations:hover .gauche, .M1:hover, .meContacter:hover, .A3Formations2:hover .gauche,
+    .B3Formations2:hover .gauche{
         background-color: #338f98 !important;
     }
 
@@ -448,6 +450,29 @@
     .C3Formations { grid-area: C3Formations;}
     
     .A3Formations .texteditor a, .B3Formations .texteditor a, .C3Formations .texteditor a{
+            color: #cce2e5 !important;
+    }
+    
+    .grid-containerFormations2 {
+        display: grid;
+        /*grid-template-columns: 0.5fr 1fr 1fr 1fr 0.5fr;*/
+        grid-template-columns: 20% 23% 13%  23% 20%;
+
+        grid-template-rows: 60px auto 1fr;
+
+        grid-template-areas:
+            ". A1Formations2 . B1Formations2 ."
+            ". A2Formations2 . B2Formations2 ."
+            ". A3Formations2 . B3Formations2 .";
+    }
+    .A1Formations2 { grid-area: A1Formations2;margin: 0 1rem 0 1rem}
+    .A2Formations2 { grid-area: A2Formations2; padding:  4rem 0.5rem 1rem 0.5rem;}
+    .A3Formations2 { grid-area: A3Formations2;}
+    .B1Formations2 { grid-area: B1Formations2;margin: 0 1rem 0 1rem}
+    .B2Formations2 { grid-area: B2Formations2;padding:  4rem 1rem 1rem 1rem;}
+    .B3Formations2 { grid-area: B3Formations2;}
+   
+    .A3Formations2 .texteditor a, .B3Formations2 .texteditor a{
             color: #cce2e5 !important;
     }
     
@@ -816,6 +841,58 @@
 
 
     @media (max-width: 800px) {
+         
+        .grid-containerFormations {
+            display: grid;
+            /*grid-template-columns: 0.5fr 1fr 1fr 1fr 0.5fr;*/
+            grid-template-columns: 4% 1fr 4%;
+
+            grid-template-rows: 60px auto 1fr 60px auto 1fr 60px auto 1fr;
+
+            grid-template-areas:
+                ". A1Formations ."
+                ". A2Formations ."
+                ". A3Formations ."
+                ". B1Formations ."
+                ". B2Formations ."
+                ". B3Formations ."
+                ". C1Formations ."
+                ". C2Formations ."
+                ". C3Formations .";
+        }
+        .A1Formations { grid-area: A1Formations;margin: 0 1rem 0 1rem}
+        .A2Formations { grid-area: A2Formations; padding:  4rem 0.5rem 1rem 0.5rem;}
+        .A3Formations { grid-area: A3Formations; margin-bottom: 15px;}
+        .B1Formations { grid-area: B1Formations;margin: 0 1rem 0 1rem}
+        .B2Formations { grid-area: B2Formations;padding:  4rem 1rem 1rem 1rem;}
+        .B3Formations { grid-area: B3Formations;margin-bottom: 15px;}
+        .C1Formations { grid-area: C1Formations; margin: 0 1rem 0 1rem}
+        .C2Formations { grid-area: C2Formations;padding:  4rem 1rem 1rem 1rem;}
+        .C3Formations { grid-area: C3Formations;}
+        
+        .grid-containerFormations2 {
+            display: grid;
+            /*grid-template-columns: 0.5fr 1fr 1fr 1fr 0.5fr;*/
+            grid-template-columns: 4% 1fr 4%;
+
+            grid-template-rows: 60px auto 1fr 60px auto 1fr;
+
+            grid-template-areas:
+                ". A1Formations2 ."
+                ". A2Formations2 ."
+                ". A3Formations2 ."
+                ". B1Formations2 ."
+                ". B2Formations2 ."
+                ". B3Formations2 .";
+        }
+        .A1Formations2 { grid-area: A1Formations2;margin: 0 1rem 0 1rem}
+        .A2Formations2 { grid-area: A2Formations2; padding:  4rem 0.5rem 1rem 0.5rem;}
+        .A3Formations2 { grid-area: A3Formations2;margin-bottom: 15px;}
+        .B1Formations2 { grid-area: B1Formations2;margin: 0 1rem 0 1rem}
+        .B2Formations2 { grid-area: B2Formations2;padding:  4rem 1rem 1rem 1rem;}
+        .B3Formations2 { grid-area: B3Formations2;}
+
+        
 
         /*mentions légales grid.layoutit.com?id=f0UNf9g */
         .grid-container-mentions-legales {
