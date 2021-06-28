@@ -24,7 +24,8 @@ class Home extends BaseController {
 
             $arrayPages = array('coachingentreprise', 'coachingparticuliers', 'formations', 'apropos', 'contact');
             $arraySousPage = array('coachingindividuel', 'coachingequipes', 'coachingorganisations',
-                'gestiondutemps', 'gestiondesconflits', 'managementniveau1', 'managementniveau2', 'managementadistance', 'formation6');
+                'gestiondutemps', 'gestiondesconflits', 'managementniveau1', 'managementniveau2', 'managementadistance', 'formation6',
+                'lacoach', 'lespartenaires');
 
             $articlesPages = new ArticlesPagesModel();
             $imagesPages = new ImagesPagesModel();
@@ -37,8 +38,6 @@ class Home extends BaseController {
                 $this->data['images'] = $imagesPages->findImagesPage($page);
                 if ($page == 'contact') {
                     $this->twig->display('admin/contact.html', $this->data);
-                } else if ($page == 'apropos') {
-                    $this->twig->display('admin/adecio.html', $this->data);
                 }else if ($page == 'formations') {
                     $this->twig->display('/admin/formations.html', $this->data);
                 }else {
@@ -48,7 +47,11 @@ class Home extends BaseController {
                 $this->data['nomPage'] = $souspage;
                 $this->data['articles'] = $articlesPages->findArticlesPage($souspage);
                 $this->data['images'] = $imagesPages->findImagesPage($souspage);
-                if ($page == 'formations') {
+                if ($souspage == 'lacoach') {
+                    $this->twig->display('admin/adecio.html', $this->data);
+                }else if ($souspage == 'lespartenaires') {
+                    $this->twig->display('admin/lespartenaires.html', $this->data);
+                }else if ($page == 'formations') {
                     $this->twig->display('admin/typeFormations.html', $this->data);
                 } else {
                     $this->twig->display('admin/type.html', $this->data);

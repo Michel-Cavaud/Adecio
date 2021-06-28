@@ -73,9 +73,19 @@
                     </ul>
                 </li>
                 <li class="nav-item">
-                   
-                    <a class="nav-link colorpro dosis" href="{{ base_url('apropos') }}">À PROPOS</a>
-                   
+                    <a class="nav-link colorpro dosis" href="#">À PROPOS</a>
+                    <ul class="ulsousmenu">
+                        <a class=" dosis sousmenu" href="{{ base_url('apropos/lacoach') }}">
+                            <li class="">
+                                La coach
+                            </li>
+                        </a>
+                         <!--<a class=" dosis sousmenu" href="{{ base_url('apropos/lespartenaires') }}">
+                            <li class="">
+                                Les partenanires
+                            </li>
+                        </a>-->
+                    </ul>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link colorpro dosis" href="{{ base_url('contact') }}">CONTACT</a>

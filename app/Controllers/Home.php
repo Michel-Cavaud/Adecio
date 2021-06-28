@@ -15,7 +15,8 @@ class Home extends BaseController {
 
         $arrayPages = array('coachingentreprise', 'coachingparticuliers', 'formations', 'apropos', 'contact', 'mentionslegales');
         $arraySousPage = array('coachingindividuel', 'coachingequipes', 'coachingorganisations',
-            'gestiondutemps', 'gestiondesconflits', 'managementniveau1', 'managementniveau2', 'managementadistance', 'formation6');
+            'gestiondutemps', 'gestiondesconflits', 'managementniveau1', 'managementniveau2', 'managementadistance', 'formation6',
+            'lacoach', 'lespartenaires');
 
         $articlesPages = new ArticlesPagesModel();
         $imagesPages = new ImagesPagesModel();
@@ -28,8 +29,6 @@ class Home extends BaseController {
             $this->data['images'] = $imagesPages->findImagesPage($page);
             if ($page == 'contact') {
                 $this->twig->display('contact.html', $this->data);
-            } else if ($page == 'apropos') {
-                $this->twig->display('adecio.html', $this->data);
             } else if ($page == 'mentionslegales') {
                 $this->twig->display('mentionslegales.html', $this->data);
             }else if ($page == 'formations') {
@@ -40,9 +39,13 @@ class Home extends BaseController {
         } elseif (in_array($page, $arrayPages) & in_array($souspage, $arraySousPage)) {
             $this->data['articles'] = $articlesPages->findArticlesPage($souspage);
             $this->data['images'] = $imagesPages->findImagesPage($souspage);
-            if ($page == 'formations') {
+            if ($souspage == 'lacoach') {
+                $this->twig->display('adecio.html', $this->data);
+            }else if ($souspage == 'lespartenaires') {
+                $this->twig->display('lespartenaires.html', $this->data);
+            }else if ($page == 'formations') {
                 $this->twig->display('typeFormations.html', $this->data);
-            } else {
+            }else {
                 $this->twig->display('type.html', $this->data);
             }
         } else {

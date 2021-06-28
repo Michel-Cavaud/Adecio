@@ -82,16 +82,17 @@ class Ajax extends BaseController {
 
     public function changetext() {
         if ($this->request->isAJAX()) {
-            $data = $this->request->getVar();
-            //print_r($data);
+           
+            $data = $this->request->getPost();
+            
             $unText = new UnText();
             $unText->text = $data['textModal'];
             $unText->page = $data['nompage'];
             $unText->position = $data['idtext'];
-
+            
             $articleModel = new ArticlesPagesModel;
             if ($articleModel->updateText($unText)) {
-                
+                $_POST = null;
             } else {
                 throw new \CodeIgniter\Database\Exceptions\DatabaseException();
             }

@@ -31,7 +31,7 @@ class ArticlesPagesModel extends Model {
             $builder->select('id_pages');
             $query = $builder->get();
             $idPage = $query->getRow();
-
+            //print_r($unText);
 
             $builder = $this->db->table('admin_articles');
             $data = [

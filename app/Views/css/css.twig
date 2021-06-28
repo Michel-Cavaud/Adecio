@@ -9,9 +9,13 @@
         Created on : 16 févr. 2021, 16:51:19
         Author     : michel
     */
+    
+    .portrait{
+        max-width: 150px;
+    }
 
     .texteditor ul li {
-         list-style-position: outside;
+        list-style-position: outside;
         margin-left : 1rem;
     }
     .texteditor a:link{
@@ -143,7 +147,7 @@
     }
     #accompagnerFormations{
         margin-top: 5.5rem;
-      
+
     }
     #accompagnerType{
         margin-top: 5.5rem;
@@ -427,6 +431,21 @@
         border-left : 15px solid transparent;
     }
 
+    /* partenaaires grid.layoutit.com?id=439iRz1 */
+    .containerPartenaires {
+        display: grid;
+        grid-template-columns: 6% 1fr 1fr 1fr 1fr 6%;
+        grid-template-rows: 1fr;
+        gap: 0em 2em;
+        grid-auto-flow: row;
+        grid-template-areas:
+            ". partenaire1 partenaire2 partenaire3 partenaire4 .";
+    }
+    .partenaire1 { grid-area: partenaire1; padding:  1rem 0.5rem 1rem 0.5rem;}
+    .partenaire2 { grid-area: partenaire2; padding:  1rem 0.5rem 1rem 0.5rem;}
+    .partenaire3 { grid-area: partenaire3; padding:  1rem 0.5rem 1rem 0.5rem;}
+    .partenaire4 { grid-area: partenaire4; padding:  1rem 0.5rem 1rem 0.5rem;}
+
     .grid-containerFormations {
         display: grid;
         /*grid-template-columns: 0.5fr 1fr 1fr 1fr 0.5fr;*/
@@ -448,11 +467,11 @@
     .C1Formations { grid-area: C1Formations; margin: 0 1rem 0 1rem}
     .C2Formations { grid-area: C2Formations;padding:  4rem 1rem 1rem 1rem;}
     .C3Formations { grid-area: C3Formations;}
-    
+
     .A3Formations .texteditor a, .B3Formations .texteditor a, .C3Formations .texteditor a{
-            color: #cce2e5 !important;
+        color: #cce2e5 !important;
     }
-    
+
     .grid-containerFormations2 {
         display: grid;
         /*grid-template-columns: 0.5fr 1fr 1fr 1fr 0.5fr;*/
@@ -471,11 +490,11 @@
     .B1Formations2 { grid-area: B1Formations2;margin: 0 1rem 0 1rem}
     .B2Formations2 { grid-area: B2Formations2;padding:  4rem 1rem 1rem 1rem;}
     .B3Formations2 { grid-area: B3Formations2;}
-   
+
     .A3Formations2 .texteditor a, .B3Formations2 .texteditor a{
-            color: #cce2e5 !important;
+        color: #cce2e5 !important;
     }
-    
+
     .grid-container {
         display: grid;
         /*grid-template-columns: 0.5fr 1fr 1fr 1fr 0.5fr;*/
@@ -841,7 +860,20 @@
 
 
     @media (max-width: 800px) {
-         
+        
+         .containerPartenaires {
+            display: grid;
+            grid-template-columns: 4% 1fr  4%;
+            grid-template-rows: 1fr 1fr 1fr 1fr;
+            gap: 0em 0em;
+            grid-auto-flow: row;
+            grid-template-areas:
+                ". partenaire1 ."
+                ". partenaire2 ."
+                ". partenaire3 ."
+                ". partenaire4 .";
+        }
+
         .grid-containerFormations {
             display: grid;
             /*grid-template-columns: 0.5fr 1fr 1fr 1fr 0.5fr;*/
@@ -869,7 +901,7 @@
         .C1Formations { grid-area: C1Formations; margin: 0 1rem 0 1rem}
         .C2Formations { grid-area: C2Formations;padding:  4rem 1rem 1rem 1rem;}
         .C3Formations { grid-area: C3Formations;}
-        
+
         .grid-containerFormations2 {
             display: grid;
             /*grid-template-columns: 0.5fr 1fr 1fr 1fr 0.5fr;*/
@@ -892,7 +924,7 @@
         .B2Formations2 { grid-area: B2Formations2;padding:  4rem 1rem 1rem 1rem;}
         .B3Formations2 { grid-area: B3Formations2;}
 
-        
+
 
         /*mentions légales grid.layoutit.com?id=f0UNf9g */
         .grid-container-mentions-legales {
@@ -908,7 +940,7 @@
         .mentionslegalesgauche { grid-area: mentionslegalesgauche; margin-right: 3rem }
         .mentionslegalesdroite { grid-area: mentionslegalesdroite; }
         .mentionslegalestitre { grid-area: mentionslegalestitre;padding-top: 100px; }
-        
+
         /* grille adecio 4  grid.layoutit.com?id=UUGpbGt */
         .grid-container-adecio4 {
             display: grid;
